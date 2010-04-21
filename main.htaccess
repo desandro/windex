@@ -1,0 +1,39 @@
+#========================================================================
+# .htaccess file for Indices
+#
+# Place this file at the top of the directory tree whose directory
+# indices you want to affect.  Be sure that the AddIcon directives
+# point to the correct URLs on your server.
+#
+# Indices: http://antisleep.com/software/indices
+#========================================================================
+
+Options +Indexes
+
+IndexOptions FancyIndexing
+IndexOptions FoldersFirst IgnoreCase XHTML NameWidth=*
+IndexOptions SuppressHTMLPreamble SuppressRules HTMLTable
+IndexOptions IconHeight=24 IconWidth=24
+IndexOptions SuppressDescription
+
+IndexIgnore readme.html
+
+HeaderName /indices/header.php
+ReadmeName /indices/footer.html
+
+DefaultIcon /indices/icons24/default.png
+AddIcon /indices/icons29/pixel.gif        ^^BLANKICON^^
+AddIcon /indices/icons24/dir.png          ^^DIRECTORY^^
+AddIcon /indices/icons24/text.png         .txt .text .textile
+AddIcon /indices/icons24/textmate.png        .htaccess .js .html .htm .php
+AddIcon /indices/icons29/pixel.gif         ..
+AddIcon /indices/icons24/img.png         .jpg .jpeg .png .gif .tif .tiff
+AddIcon /indices/icons24/ai.png         .ai .eps
+AddIcon /indices/icons24/doc.png         .doc .docx
+AddIcon /indices/icons24/movie.png         .mov .qt .avi .wmv
+AddIcon /indices/icons24/mp3.png         .mp3 .ogg .wav .m4a
+AddIcon /indices/icons24/pdf.png         .pdf
+AddIcon /indices/icons24/ppt.png         .ppt .pptx
+AddIcon /indices/icons24/psd.png         .psd .psb
+AddIcon /indices/icons24/xls.png         .xls .xlsx
+AddIcon /indices/icons24/zip.png         .zip .bin .tar .rar .tgz .7z
