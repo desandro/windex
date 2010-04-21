@@ -47,6 +47,10 @@ td a {
     height: 42px;
     padding-left: 40px;
     line-height: 28px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 30px;
 }
 
 tr:hover {
@@ -57,7 +61,7 @@ tr:hover {
 
 td a[href*="/"] { background: url(/indices/icons29/pointer-gray.png) right center no-repeat; }
 td a[href*="/"]:hover { background-image: url(/indices/icons29/pointer-white.png); }
-td a[href="/"], td a[href="/"]:hover { background: none; }
+/*td a[href="/"], td a[href="/"]:hover { background: none; }*/
 
 
 td a:hover,
@@ -77,14 +81,17 @@ tr td:nth-child(3) {
     font-size: 13px;
     left: 40px;
     top: 24px;
+    pointer-events: none;
 }
 
 tr td:nth-child(4) {
+    text-align: left;
     position: absolute;
-    top: 10px;
-    right: 30px;
-    color: #7E7E7E;
+    top: 24px;
+    left: 160px;
+    color: #1D58CE;
     font-size: 13px;
+    pointer-events: none;
 }
 
 tr:hover td:nth-child(3),
@@ -94,5 +101,123 @@ tr td:first-child {
     position: absolute;
     left: 5px;
     top: 7px;   
+    pointer-events: none;
 }
 
+
+/**** First row for sorting ****/
+
+tr:first-child {
+    padding: 0;
+    margin: 0;
+    background: -moz-linear-gradient(-90deg, #A0ADC0, #7588A3 50%, #6E829E 50%,  #5A6F8F);
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#A0ADC0),
+        color-stop(50%, #7588A3), color-stop(50%, #6E829E), 
+        to(#5A6F8F) );
+        
+    height: 42px;    
+    border-top: 1px solid #CFD6E0;
+    border-bottom: 1px solid #212832;
+    
+}
+
+th {
+    float: left;
+
+}
+
+th:first-child {
+    width: 80px;
+}
+
+th a,
+td a[href^="/"] {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    background: #555;
+    background: -moz-linear-gradient(-90deg, #7B92B3, #4A6594 50%, #385588 50%,  #3A5789);
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#7B92B3),
+        color-stop(50%, #4A6594), color-stop(50%, #385588), 
+        to(#3A5789) );
+    border: 1px solid;
+    border-color: #24282F #3E506C #3E506C;
+    margin-top: 7px;
+    margin-right: 5px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+    -webkit-box-shadow: 0 1px hsla(0,0%,100%,.3);
+       -moz-box-shadow: 0 1px hsla(0,0%,100%,.3);
+    text-shadow: 0 -1px hsla(0,0%,0%,.7);
+}
+
+td a[href^="/"] {
+    position: absolute;
+    left: 3px;
+    top: -43px;
+    color: transparent;
+    text-shadow: none;
+    width: 42px;
+    overflow: visible;
+}
+td a[href^="/"]:hover {
+    color: transparent;
+}
+
+/*td a[href="/"]:before {
+    content: '';
+    display: block;
+    border-style: solid;
+    border-color: transparent #FFF;
+    border-width: 3px 6px 3px 0;
+    position: absolute;
+    top: 11px;
+    left: 5px;
+}*/
+/*td a[href^="/"]:before {
+    content: '';
+    display: block;
+    border-style: solid;
+    border-color: #94A2B9 transparent #637897;
+    width: 20px;
+    border-width: 15px 15px 16px 0;
+    position: absolute;
+    top: -1px;
+    left: -21px;
+}*/
+
+td a[href^="/"]:before {
+    content: '';
+    display: block;
+    border-style: solid;
+    position: absolute;
+    width: 20px;
+    background: url(/indices/icons29/pointer-left-mask2.png) no-repeat;
+    height: 32px;
+    top: -4px;
+    left: -4px;
+}
+
+td a[href^="/"]:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 14px;
+    content: 'Parent';
+    color: white;
+    text-shadow: 0 -1px hsla(0,0%,0%,.7);
+}
+
+th a:hover,
+td a[href^="/"]:hover {
+    background: -moz-linear-gradient(-90deg, #697493, #2C3B64 50%, #1C2D57 50%,  #1D2E59);
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#697493),
+        color-stop(50%, #2C3B64), color-stop(50%, #1C2D57), 
+        to(#1D2E59) );
+    
+}
