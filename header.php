@@ -48,12 +48,14 @@
     <title><?=$titletext?></title>
 
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-    <!-- <meta name="viewport" content="user-scalable=no, width=device-width" /> -->
     <meta name="viewport" content=" initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
     
 
+    <link rel="stylesheet" media="screen and (max-device-width: 480px)" href="/indices/iphone.css" />
+    <link rel="stylesheet" media="screen and (min-device-width: 481px)" href="/indices/screen.css">
+
     <!-- <link rel="stylesheet" href="/indices/screen.css" type="text/css" media="screen" /> -->
-    <link rel="stylesheet" href="/indices/iphone.css" type="text/css" media="screen" />
+    <!-- <link rel="stylesheet" href="/indices/iphone.css" type="text/css" media="screen" /> -->
 
 
 </head>
