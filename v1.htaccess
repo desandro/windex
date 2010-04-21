@@ -25,4 +25,4 @@ DefaultIcon /indices/icons29/default.png
 AddIcon /indices/icons29/dir.png          ^^DIRECTORY^^
 
 AddIcon /indices/icons29/default.png         .txt .text .html .htm
-AddIcon /indices/icons29/back.png         ..
+AddIcon /indices/icons29/pixel.gif         ..
