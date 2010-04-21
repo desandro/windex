@@ -1,0 +1,164 @@
+/*
+  Indices styles: javascript version
+    This does its magic based on a bunch of Javascript that cruises
+    the DOM of Apache's HTML output and injects useful class names
+    throughout.
+
+  Indices: http://antisleep.com/software/indices
+*/
+
+/*==========================================================================*/
+
+html {
+}
+
+body {
+    font-family: 'Lucida Grande', 'Verdana', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    background: #EEE;
+}
+
+#pagecontainer {
+    margin: 20px;
+    background: white;
+    padding: 20px;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    -webkit-box-shadow: 0 5px 8px hsla(0,0%,0%,.2);
+       -moz-box-shadow: 0 5px 8px hsla(0,0%,0%,.2);
+            box-shadow: 0 5px 8px hsla(0,0%,0%,.2);
+}
+
+a {
+    text-decoration:none;
+    color: #22D;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: 0;
+}
+
+/* HEADER STYLING ==========================================================*/
+
+.header {
+}
+
+/* gets rid of visual glitch from hover color */
+.header img {
+    vertical-align: bottom;
+}
+
+header a {
+    font-weight: bold;
+}
+
+.readme {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.path {
+    text-align: left;
+    font-size: 26px;
+    margin: 0.5em 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 100;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #CCC;
+}
+
+.path strong {font-weight: 600; }
+
+.credits {
+    text-align: right;
+    font-size: 9px;
+    font-style: italic;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.credits a {
+    text-decoration: underline;
+}
+
+/* TABLE STYLING ============================================================*/
+
+table {
+
+    padding: 0px;
+
+    border-collapse: collapse;
+}
+
+tr,td,th {
+    border: 0;
+}
+
+td,th {
+    padding: 3px 10px 3px 0;
+}
+
+td a, th a {
+    height: 100%;
+    margin: 0;
+    padding: 2px;
+}
+
+
+/* rollover effect for table rows, header cells */
+tr:hover, th:hover {
+}
+
+th {
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+th a {
+    color: #333333;
+}
+
+
+/* Don't show the 'Parent Directory' row */
+.row_parentdir {
+    display: none;
+}
+
+/* directories appear in bold */
+td a[href*="/"] {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Parent Directory links  */
+td a[href="/"] {
+    color: #22D;
+}
+
+
+/* all cells in ICON column */
+tr td:nth-child(1) {
+    text-align: center;
+    width: 24px;
+}
+
+
+/* all cells in SIZE & LAST MODIFIED column */
+tr td:nth-child(3),
+tr td:nth-child(4) {
+    text-align: right;
+    padding-left: 10px;
+    font-size: 11px;
+}
+
+/* all DESCRIPTION cells (hide this column) */
+.col_desc {
+    display: none;
+}
+
