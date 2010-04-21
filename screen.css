@@ -13,13 +13,14 @@ html {
 }
 
 body {
-    font-family: 'Lucida Grande', 'Verdana', 'Helvetica Neue', Arial, sans-serif;
+    font-family:  'Lucida Grande', 'Verdana', 'Helvetica Neue', Arial, sans-serif;
     font-size: 13px;
     background: #EEE;
 }
 
 #pagecontainer {
-    margin: 20px;
+    width: 700px;
+    margin: 40px auto;
     background: white;
     padding: 20px;
     -webkit-border-radius: 10px;
@@ -45,8 +46,19 @@ img {
 
 /* HEADER STYLING ==========================================================*/
 
+
+
 .header {
 }
+
+h1 {
+    font-family:  'Helvetica Neue', Arial, sans-serif;
+    font-weight: 100;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+h1 strong { font-weight: 500;}
 
 /* gets rid of visual glitch from hover color */
 .header img {
@@ -117,6 +129,10 @@ tr:hover, th:hover {
 
 th {
     border-bottom: 1px solid #e0e0e0;
+    text-align: right;
+}
+
+th:nth-child(2) {
     text-align: left;
 }
 
@@ -137,7 +153,7 @@ td a[href*="/"] {
 }
 
 /* Parent Directory links  */
-td a[href="/"] {
+td a[href^="/"] {
     color: #22D;
 }
 
@@ -146,8 +162,17 @@ td a[href="/"] {
 tr td:nth-child(1) {
     text-align: center;
     width: 24px;
+    padding: 0 10px 0 0;
 }
 
+td img {
+    width: 16px;
+}
+
+/* Name cells */
+tr td:nth-child(2) {
+    width: 460px;
+}
 
 /* all cells in SIZE & LAST MODIFIED column */
 tr td:nth-child(3),
