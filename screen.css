@@ -16,6 +16,7 @@ body {
     font-family:  'Lucida Grande', 'Verdana', 'Helvetica Neue', Arial, sans-serif;
     font-size: 13px;
     background: #EEE;
+    color: #222;
 }
 
 #pagecontainer {
@@ -33,7 +34,7 @@ body {
 
 a {
     text-decoration:none;
-    color: #22D;
+    color: #26D;
 }
 
 a:hover {
@@ -116,10 +117,11 @@ td,th {
     padding: 3px 10px 3px 0;
 }
 
-td a, th a {
-    height: 100%;
-    margin: 0;
-    padding: 2px;
+td a {
+}
+
+td a:hover {
+    color: #222;
 }
 
 
@@ -150,23 +152,31 @@ th a {
 td a[href*="/"] {
     font-weight: bold;
     color: #333;
+    padding-right: 22px;
+
 }
+td a[href*="/"]:hover {
+    color: #16C;
+    background: url(/indices/icons24/pointer-small.png) right center no-repeat;;
+}
+
+
 
 /* Parent Directory links  */
 td a[href^="/"] {
     color: #22D;
 }
-
+td a[href^="/"]:hover { background: none; }
 
 /* all cells in ICON column */
 tr td:nth-child(1) {
     text-align: center;
     width: 24px;
-    padding: 0 10px 0 0;
+    padding: 1px 10px 1px 0;
 }
 
 td img {
-    width: 16px;
+    width: 24px;
 }
 
 /* Name cells */

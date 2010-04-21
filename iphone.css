@@ -99,8 +99,8 @@ tr:hover td:nth-child(4) { color: #FFF;}
 
 tr td:first-child {
     position: absolute;
-    left: 5px;
-    top: 7px;   
+    left: 8px;
+    top: 8px;   
     pointer-events: none;
 }
 
