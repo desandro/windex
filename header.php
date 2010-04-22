@@ -32,7 +32,7 @@
     $folders = explode('/',$uri);
 
 
-    $titletext = str_replace("%DIR", $uri, $titleformat);
+    $titletext = str_replace("%DIR", $uri, $titleformat) . '/';
 
     // this is hacky, but in almost every situation there's no real harm.
     // it just might fail if you're doing something funky with directory mappings.
