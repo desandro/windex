@@ -22,11 +22,11 @@ HeaderName /indices/header.php
 ReadmeName /indices/footer.html
 
 DefaultIcon /indices/icons24/default.png
-AddIcon /indices/icons29/pixel.gif        ^^BLANKICON^^
+AddIcon /indices/icons24/pixel.gif        ^^BLANKICON^^
+AddIcon /indices/icons24/pixel.gif         ..
 AddIcon /indices/icons24/dir.png          ^^DIRECTORY^^
 AddIcon /indices/icons24/text.png         .txt .text .textile
-AddIcon /indices/icons24/textmate.png        .htaccess .js .html .htm .php
-AddIcon /indices/icons29/pixel.gif         ..
+AddIcon /indices/icons24/textmate.png        .htaccess .js .css .html .htm .php
 AddIcon /indices/icons24/img.png         .jpg .jpeg .png .gif .tif .tiff
 AddIcon /indices/icons24/ai.png         .ai .eps
 AddIcon /indices/icons24/doc.png         .doc .docx

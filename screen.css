@@ -61,51 +61,15 @@ h1 {
 
 h1 strong { font-weight: 500;}
 
-/* gets rid of visual glitch from hover color */
-.header img {
-    vertical-align: bottom;
-}
-
-header a {
-    font-weight: bold;
-}
-
 .readme {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.path {
-    text-align: left;
-    font-size: 26px;
-    margin: 0.5em 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 100;
-    padding-bottom: 0.2em;
-    border-bottom: 1px solid #CCC;
-}
-
-.path strong {font-weight: 600; }
-
-.credits {
-    text-align: right;
-    font-size: 9px;
-    font-style: italic;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.credits a {
-    text-decoration: underline;
-}
-
 /* TABLE STYLING ============================================================*/
 
 table {
-
     padding: 0px;
-
     border-collapse: collapse;
 }
 
@@ -164,9 +128,12 @@ td a[href*="/"]:hover {
 
 /* Parent Directory links  */
 td a[href^="/"] {
-    color: #22D;
+    color: #16C;
+    font-weight: normal;
 }
-td a[href^="/"]:hover { background: none; }
+td a[href^="/"],
+td a[href^="/"]:hover { background: url(/indices/icons24/up-arrow.png) right center no-repeat; }
+td a[href^="/"]:hover { color: #222;}
 
 /* all cells in ICON column */
 tr td:nth-child(1) {
@@ -194,6 +161,12 @@ tr td:nth-child(4) {
 
 /* all DESCRIPTION cells (hide this column) */
 .col_desc {
+    display: none;
+}
+
+
+/* hide ugly Apache icons */
+img[src^="/icons"] {
     display: none;
 }
 

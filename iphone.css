@@ -221,3 +221,8 @@ td a[href^="/"]:hover {
         to(#1D2E59) );
     
 }
+
+/* hide ugly Apache icons */
+img[src^="/icons"] {
+    display: none;
+}

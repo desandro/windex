@@ -26,8 +26,8 @@
     //=======================================================================
 
     $uri = urldecode($_SERVER['REQUEST_URI']);
-    $uri = preg_replace("/\/ *$/", "", $uri);
     $uri = preg_replace("/\?.*$/", "", $uri);
+    $uri = preg_replace("/\/ *$/", "", $uri);
 
     $titletext = str_replace("%DIR", $uri, $titleformat);
 
