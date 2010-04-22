@@ -59,8 +59,8 @@ tr:hover {
     background: -moz-linear-gradient(-90deg, #0F74F1, #0842DF );
 }
 
-td a[href*="/"] { background: url(/indices/icons24/pointer-gray.png) right center no-repeat; }
-td a[href*="/"]:hover { background-image: url(/indices/icons24/pointer-white.png); }
+td a[href*="/"] { background: url(/indices/icons/pointer-gray.png) right center no-repeat; }
+td a[href*="/"]:hover { background-image: url(/indices/icons/pointer-white.png); }
 /*td a[href="/"], td a[href="/"]:hover { background: none; }*/
 
 
@@ -197,7 +197,7 @@ td a[href^="/"]:before {
     border-style: solid;
     position: absolute;
     width: 20px;
-    background: url(/indices/icons24/pointer-left-mask.png) no-repeat;
+    background: url(/indices/icons/pointer-left-mask.png) no-repeat;
     height: 32px;
     top: -4px;
     left: -4px;

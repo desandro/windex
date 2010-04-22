@@ -29,6 +29,7 @@
     $uri = preg_replace("/\?.*$/", "", $uri);
     $uri = preg_replace("/\/ *$/", "", $uri);
     
+
     $titletext = str_replace("%DIR", $uri, $titleformat) . '/';
 
     // this is hacky, but in almost every situation there's no real harm.
@@ -42,7 +43,8 @@
         // If no readme, show URI.
 	$pathtext = "<h1>Index of <strong>$uri</strong></h1>";
     }
-    
+
+    $folders = explode('/',$uri);
     $folderCount = count($folders);
     $pathMarkup = '';
     foreach ($folders as $i => $folder) {
@@ -64,9 +66,6 @@
 
     <link rel="stylesheet" media="screen and (max-device-width: 480px)" href="/indices/iphone.css" />
     <link rel="stylesheet" media="screen and (min-device-width: 481px)" href="/indices/screen.css">
-
-    <!-- <link rel="stylesheet" href="/indices/screen.css" type="text/css" media="screen" /> -->
-    <!-- <link rel="stylesheet" href="/indices/iphone.css" type="text/css" media="screen" /> -->
 
 
 </head>

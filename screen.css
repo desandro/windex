@@ -132,7 +132,7 @@ td a[href*="/"] {
 }
 td a[href*="/"]:hover {
     color: #16C;
-    background: url(/indices/icons24/pointer-small.png) right center no-repeat;;
+    background: url(/indices/icons/pointer-small.png) right center no-repeat;;
 }
 
 
@@ -143,7 +143,7 @@ td a[href^="/"] {
     font-weight: normal;
 }
 td a[href^="/"],
-td a[href^="/"]:hover { background: url(/indices/icons24/up-arrow.png) right center no-repeat; }
+td a[href^="/"]:hover { background: url(/indices/icons/up-arrow.png) right center no-repeat; }
 td a[href^="/"]:hover { color: #222;}
 
 /* all cells in ICON column */
