@@ -29,9 +29,6 @@
     $uri = preg_replace("/\?.*$/", "", $uri);
     $uri = preg_replace("/\/ *$/", "", $uri);
     
-    $folders = explode('/',$uri);
-
-
     $titletext = str_replace("%DIR", $uri, $titleformat) . '/';
 
     // this is hacky, but in almost every situation there's no real harm.
@@ -49,13 +46,12 @@
     $folderCount = count($folders);
     $pathMarkup = '';
     foreach ($folders as $i => $folder) {
-            $link = '';
-            $backCount = $folderCount - $i -1;
-            for ($j=0; $j < $backCount; $j++) { 
-                $link .= '../';
-            }
-            $pathMarkup .= '<a href="'.$link.'">'.$folder.'/</a>';
-
+        $link = '';
+        $backCount = $folderCount - $i -1;
+        for ($j=0; $j < $backCount; $j++) { 
+            $link .= '../';
+        }
+        $pathMarkup .= '<a href="'.$link.'">'.$folder.'/</a>';
     }    
 ?>
 <html>
