@@ -162,7 +162,7 @@ tr td:nth-child(2) {
     width: 460px;
 }
 
-/* all cells in SIZE & LAST MODIFIED column */
+/* Last Modifed & Size */
 tr td:nth-child(3),
 tr td:nth-child(4) {
     text-align: right;
@@ -170,11 +170,8 @@ tr td:nth-child(4) {
     font-size: 11px;
 }
 
-/* all DESCRIPTION cells (hide this column) */
-.col_desc {
-    display: none;
-}
-
+/* Hide Description column*/
+tr td:nth-child(5) { display: none;}
 
 /* hide ugly Apache icons */
 img[src^="/icons"] {
