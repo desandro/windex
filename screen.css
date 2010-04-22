@@ -61,6 +61,17 @@ h1 {
 
 h1 strong { font-weight: 500;}
 
+h1 a {
+    color: #222;
+    border-bottom: 2px solid transparent;
+}
+
+h1 a:hover {
+    color: #16C;
+    text-decoration: none;
+    border-color: #16C;
+}
+
 .readme {
     margin-top: 10px;
     margin-bottom: 10px;

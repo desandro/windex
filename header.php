@@ -28,6 +28,9 @@
     $uri = urldecode($_SERVER['REQUEST_URI']);
     $uri = preg_replace("/\?.*$/", "", $uri);
     $uri = preg_replace("/\/ *$/", "", $uri);
+    
+    $folders = explode('/',$uri);
+
 
     $titletext = str_replace("%DIR", $uri, $titleformat);
 
@@ -42,6 +45,18 @@
         // If no readme, show URI.
 	$pathtext = "<h1>Index of <strong>$uri</strong></h1>";
     }
+    
+    $folderCount = count($folders);
+    $pathMarkup = '';
+    foreach ($folders as $i => $folder) {
+            $link = '';
+            $backCount = $folderCount - $i -1;
+            for ($j=0; $j < $backCount; $j++) { 
+                $link .= '../';
+            }
+            $pathMarkup .= '<a href="'.$link.'">'.$folder.'/</a>';
+
+    }    
 ?>
 <html>
 <head>
@@ -64,6 +79,6 @@
     <div id="pagecontainer">
 
         <div class="header">
-            <?=$pathtext?>
+            <h1>Index of <strong><?= $pathMarkup ?></strong></h1>
             <?=$readmetext?>
         </div>
