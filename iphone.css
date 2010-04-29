@@ -49,55 +49,53 @@ td a:hover {
     color: white;
 }
 
+/* directory links*/
 td a[href*="/"] { background: url(/indices/icons/pointer-gray.png) right center no-repeat; }
 td a[href*="/"]:hover { background-image: url(/indices/icons/pointer-white.png); }
 
 
-tr td:nth-child(5) {
-    display: none;
+tr td:first-child,
+tr td:nth-child(3),
+tr td:nth-child(4) {
+    position: absolute;    
+    pointer-events: none;
+    text-align: left;
+    font-size: 13px;
 }
 
+
+/* Icon */
+tr td:first-child {
+    left: 8px;
+    top: 8px;   
+}
+
+/* Date Modified */
 tr td:nth-child(3) {
-    position: absolute;
-    text-align: left;
     color: #7E7E7E;
-    font-size: 13px;
     left: 40px;
     top: 24px;
-    pointer-events: none;
 }
 
+/* Size */
 tr td:nth-child(4) {
-    text-align: left;
-    position: absolute;
     top: 24px;
     left: 160px;
     color: #1D58CE;
-    font-size: 13px;
-    pointer-events: none;
 }
 
 tr:hover td:nth-child(3),
 tr:hover td:nth-child(4) { color: #FFF;} 
 
-tr td:first-child {
-    position: absolute;
-    left: 8px;
-    top: 8px;   
-    pointer-events: none;
-}
-
 
 /**** First row for sorting ****/
 
 tr:first-child {
-    padding: 0;
-    margin: 0;
+    background: #6E829E;
     background: -moz-linear-gradient(-90deg, #A0ADC0, #7588A3 50%, #6E829E 50%,  #5A6F8F);
     background: -webkit-gradient(linear, 0 top, 0 bottom, from(#A0ADC0),
         color-stop(50%, #7588A3), color-stop(50%, #6E829E), 
         to(#5A6F8F) );
-        
     height: 42px;    
     border-top: 1px solid #CFD6E0;
     border-bottom: 1px solid #212832;
@@ -106,13 +104,13 @@ tr:first-child {
 
 th {
     float: left;
-
 }
 
 th:first-child {
     width: 80px;
 }
 
+/* Header links & Parent Dir link */
 th a,
 td a[href^="/"] {
     display: block;
@@ -157,9 +155,10 @@ th:nth-child(4) a {
             border-top-right-radius: 5px;
     -webkit-border-bottom-right-radius: 5px;
             border-bottom-right-radius: 5px;
-
 }
 
+
+/* Parent Diretory link */
 td a[href^="/"] {
     position: absolute;
     left: 3px;

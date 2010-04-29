@@ -40,6 +40,7 @@
 	$pathtext = "<h1>Index of <strong>$uri</strong></h1>";
     }
 
+    // generate title path, with links to each parent folder
     $folders = explode('/',$uri);
     $folderCount = count($folders);
     $pathMarkup = '';
