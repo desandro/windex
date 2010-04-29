@@ -1,17 +1,3 @@
-/*
-  Indices styles: javascript version
-    This does its magic based on a bunch of Javascript that cruises
-    the DOM of Apache's HTML output and injects useful class names
-    throughout.
-
-  Indices: http://antisleep.com/software/indices
-*/
-
-/*==========================================================================*/
-
-html {
-}
-
 body {
     font-family:  'Lucida Grande', 'Verdana', 'Helvetica Neue', Arial, sans-serif;
     font-size: 13px;

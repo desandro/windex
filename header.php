@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-     Pleasant Apache directory listings courtesy of Indices:
-     http://antisleep.com/software/indices
--->
 <?php
     //=======================================================================
     // A few configuration values.  Change these as you see fit.
@@ -58,6 +54,11 @@
 ?>
 <html>
 <head>
+    <!--
+         Pleasant Apache directory listings courtesy of Indices:
+         http://antisleep.com/software/indices
+    -->
+    
     <title><?=$titletext?></title>
 
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
