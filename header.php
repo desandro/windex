@@ -82,21 +82,23 @@
     <div id="pagecontainer">
         
         <?php
-            require_once( $_SERVER["DOCUMENT_ROOT"]. $indicesPath . '/textile.php');
-            // require_once('/Users/daviddesandro/projects/indices/textile.php');
-            $readmeFiles = glob('README.*');
-            $readmeRaw = file_get_contents($readmeFiles[0]);
-            $readmeFormatted = str_replace("\n", '<br />', $readmeRaw);
-            // echo $_SERVER["DOCUMENT_ROOT"]. $indicesPath . '/textile.php' . '<br />';
-            // echo'/Users/daviddesandro/projects/indices/textile.php';    
+            // Textile
+            // require_once( $_SERVER["DOCUMENT_ROOT"]. $indicesPath . '/textile.php');
+            // $readmeFiles = glob('README.*');
+            // $readmeRaw = file_get_contents($readmeFiles[0]);
+            // $readmeFormatted = str_replace("\n", '<br />', $readmeRaw);
+            //         
+            // $textile = new Textile();
             
-            $textile = new Textile();
+            require_once( $_SERVER["DOCUMENT_ROOT"]. $indicesPath . '/markdown.php');
+            $readmeFiles = glob($_SERVER["DOCUMENT_ROOT"]. $uri .'/README.*');
+            $readmeRaw = file_get_contents($readmeFiles[0]);
             
         ?>
 
 
         <div class="header">
             <h1><?= $h1text ?></h1>
-            <?php echo $textile->TextileThis($readmeRaw); ?>
+            <?php echo Markdown($readmeRaw); ?>
 
         </div>
