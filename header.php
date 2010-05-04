@@ -12,10 +12,13 @@
     $show_readme = true;
 
     // titleformat
-    //   How to format the <title> tag.  %DIR is replaced with the directory path.
+    //   How to format the <title> and <h1> text.  %DIR is replaced with the directory path.
     // for instance:
-    //   $titleformat = "antisleep: %DIR";
+    //   $titleformat = "Now Viewing: %DIR";
     $titleformat = "Index of %DIR";
+    
+    // indices path
+    $indicesPath = '/mindexes';
 
     //=======================================================================
     // (end of config)
@@ -26,19 +29,7 @@
     $uri = preg_replace("/\/ *$/", "", $uri);
     
 
-    $titletext = str_replace("%DIR", $uri, $titleformat) . '/';
-
-    // this is hacky, but in almost every situation there's no real harm.
-    // it just might fail if you're doing something funky with directory mappings.
-    $readmetext = "";
-    $pathtext = "";
-    $readmefile = $_SERVER["DOCUMENT_ROOT"] . $uri . "/readme.html";
-    if ($show_readme && file_exists($readmefile)) {
-        $readmetext = "<div class='readme'>" . file_get_contents($readmefile) . "</div>";
-    } else {
-        // If no readme, show URI.
-	$pathtext = "<h1>Index of <strong>$uri</strong></h1>";
-    }
+    $titletext = str_replace("%DIR", $uri, $titleformat). '/';
 
     // generate title path, with links to each parent folder
     $folders = explode('/',$uri);
@@ -50,8 +41,21 @@
         for ($j=0; $j < $backCount; $j++) { 
             $link .= '../';
         }
-        $pathMarkup .= '<a href="'.$link.'">'.$folder.'/</a>';
+        $pathMarkup .= '<strong><a href="'.$link.'">'.$folder.'/</a></strong>';
     }    
+    
+    $h1text = str_replace("%DIR", $pathMarkup, $titleformat);
+
+    // this is hacky, but in almost every situation there's no real harm.
+    // it just might fail if you're doing something funky with directory mappings.
+    $readmetext = "";
+    $pathtext = "";
+    $readmefile = $_SERVER["DOCUMENT_ROOT"] . $uri . "/README.textile";
+    if ($show_readme && file_exists($readmefile)) {
+        $readmetext = "<div class='readme'>" . file_get_contents($readmefile) . "</div>";
+    }
+
+
 ?>
 <html>
 <head>
@@ -76,8 +80,23 @@
 
 <body>
     <div id="pagecontainer">
+        
+        <?php
+            require_once( $_SERVER["DOCUMENT_ROOT"]. $indicesPath . '/textile.php');
+            // require_once('/Users/daviddesandro/projects/indices/textile.php');
+            $readmeFiles = glob('README.*');
+            $readmeRaw = file_get_contents($readmeFiles[0]);
+            $readmeFormatted = str_replace("\n", '<br />', $readmeRaw);
+            // echo $_SERVER["DOCUMENT_ROOT"]. $indicesPath . '/textile.php' . '<br />';
+            // echo'/Users/daviddesandro/projects/indices/textile.php';    
+            
+            $textile = new Textile();
+            
+        ?>
+
 
         <div class="header">
-            <h1>Index of <strong><?= $pathMarkup ?></strong></h1>
-            <?=$readmetext?>
+            <h1><?= $h1text ?></h1>
+            <?php echo $textile->TextileThis($readmeRaw); ?>
+
         </div>
