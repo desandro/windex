@@ -1,11 +1,10 @@
 #========================================================================
-# .htaccess file for Indices
+# .htaccess file for Mindexes
 #
 # Place this file at the top of the directory tree whose directory
-# indices you want to affect.  Be sure that the AddIcon directives
-# point to the correct URLs on your server.
+# mindexes you want to affect.  Be sure that the file paths
+# point to the correct absolute URL of mmindexes/ on your server.
 #
-# Indices: http://antisleep.com/software/indices
 #========================================================================
 
 Options +Indexes
@@ -16,24 +15,22 @@ IndexOptions SuppressHTMLPreamble SuppressRules HTMLTable
 IndexOptions IconHeight=24 IconWidth=24
 IndexOptions SuppressDescription
 
-IndexIgnore readme.html
+HeaderName /mindexes/header.php
+ReadmeName /mindexes/footer.html
 
-HeaderName /indices/header.php
-ReadmeName /indices/footer.html
-
-DefaultIcon /indices/icons/default.png
-AddIcon /indices/icons/pixel.gif        ^^BLANKICON^^
-AddIcon /indices/icons/pixel.gif         ..
-AddIcon /indices/icons/dir.png          ^^DIRECTORY^^
-AddIcon /indices/icons/text.png         .txt .text .textile
-AddIcon /indices/icons/textmate.png        .htaccess .js .css .html .htm .php
-AddIcon /indices/icons/img.png         .jpg .jpeg .png .gif .tif .tiff
-AddIcon /indices/icons/ai.png         .ai .eps
-AddIcon /indices/icons/doc.png         .doc .docx
-AddIcon /indices/icons/movie.png         .mov .qt .avi .wmv
-AddIcon /indices/icons/mp3.png         .mp3 .ogg .wav .m4a
-AddIcon /indices/icons/pdf.png         .pdf
-AddIcon /indices/icons/ppt.png         .ppt .pptx
-AddIcon /indices/icons/psd.png         .psd .psb
-AddIcon /indices/icons/xls.png         .xls .xlsx
-AddIcon /indices/icons/zip.png         .zip .bin .tar .rar .tgz .7z
+DefaultIcon /mindexes/icons/default.png
+AddIcon /mindexes/icons/pixel.gif        ^^BLANKICON^^
+AddIcon /mindexes/icons/pixel.gif         ..
+AddIcon /mindexes/icons/dir.png          ^^DIRECTORY^^
+AddIcon /mindexes/icons/text.png         .txt .text .textile
+AddIcon /mindexes/icons/textmate.png        .htaccess .js .css .html .htm .php
+AddIcon /mindexes/icons/img.png         .jpg .jpeg .png .gif .tif .tiff .ico
+AddIcon /mindexes/icons/ai.png         .ai .eps
+AddIcon /mindexes/icons/doc.png         .doc .docx
+AddIcon /mindexes/icons/movie.png         .mov .qt .avi .wmv
+AddIcon /mindexes/icons/mp3.png         .mp3 .ogg .wav .m4a
+AddIcon /mindexes/icons/pdf.png         .pdf
+AddIcon /mindexes/icons/ppt.png         .ppt .pptx
+AddIcon /mindexes/icons/psd.png         .psd .psb
+AddIcon /mindexes/icons/xls.png         .xls .xlsx
+AddIcon /mindexes/icons/zip.png         .zip .bin .tar .rar .tgz .7z

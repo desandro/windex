@@ -56,7 +56,9 @@
 <html>
 <head>
     <!--
-         Pleasant Apache directory listings courtesy of Indices:
+         Minimal directory listings generated with Mindexes
+         
+         A mod of Indices:
          http://antisleep.com/software/indices
     -->
     
@@ -66,8 +68,8 @@
     <meta name="viewport" content=" initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
     
 
-    <link rel="stylesheet" media="screen and (max-device-width: 480px)" href="/indices/iphone.css" />
-    <link rel="stylesheet" media="screen and (min-device-width: 481px)" href="/indices/screen.css">
+    <link rel="stylesheet" media="screen and (max-device-width: 480px)" href="/mindexes/iphone.css" />
+    <link rel="stylesheet" media="screen and (min-device-width: 481px)" href="/mindexes/screen.css">
 
 
 </head>
