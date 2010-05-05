@@ -16,7 +16,7 @@ This software is free to use and modify.  You may not charge for or sell this so
 h2. Installation
 
 # Copy this entire directory into your site's directory tree. For instance, if your site's files are in /www/mysite.com, place this directory in /www/mysite.com/indices.
-# Edit indices/header.php and change any configuration options.
+# Edit mindexes/header.php and change any configuration options.
 # Copy main-htaccess to your site's directory root, into a file named .htaccess.  NOTE: it helps to know what you're doing before doing this.  The supplied htaccess file may end up overriding some of your site's configuration and causing weird behavior. So understand what you're doing here, and merge your existing directory config with the contents of main-htaccess.
 # Try it out!  Browse to a directory that does not contain an index file.
 
