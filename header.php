@@ -47,44 +47,48 @@
     
     $h1text = str_replace("%DIR", $pathMarkup, $titleFormat);
 
-    // this is hacky, but in almost every situation there's no real harm.
-    // it just might fail if you're doing something funky with directory mappings.
-    // $readmetext = "";
-    // $readmefile = $absPath . "/README.textile";
-    // if ($showReadme && file_exists($readmefile)) {
-    //     $readmetext = <div class=readme> . file_get_contents($readmefile) . "</div>";
-    // }
 
-    // Textile
-    // require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/textile.php');
-    // $readmeFiles = glob('README.*');
-    // $readmeRaw = file_get_contents($readmeFiles[0]);
-    // $readmeFormatted = str_replace("\n", '<br />', $readmeRaw);
-    //         
-    // $textile = new Textile();
-
-    // Markdown
-    // require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/markdown.php');
-    // $readmeFiles = glob( $absPath .'/README.*');
-    // $readmeRaw = file_get_contents($readmeFiles[0]);
-
-
-    // if ($showReadme) {
-    //     foreach (glob($absPath . '*') as $file) {
-    //         if( preg_match('/^README(\.[A-z0-9]+)?$/i', $file) ) {
-    //             $readmeFile = $file;
-    //             break;
-    //         }
-    //     }
-    //     $readmeMarkup = $readmeFile;
-    // }
-    // 
-    // 
-    
     $readmeMarkup = '';
     $currentDir = $absPath . '/';
-    if($showReadme && is_dir($currentDir) ) {
+    if (is_dir($currentDir)) {
+        if ($dh = opendir($currentDir)) {
+            while (($file = readdir($dh)) !== false) {
+                // go thru files, find the first README.*
+                if( preg_match('/^README(\.[A-z0-9]+)?$/i', $file) && !is_dir($currentDir.$file) ) {
+                    // echo $file . '<br />';
+                    $readmeFile = $file;
+                    break;
+                }
+            }
+            closedir($dh);
+        }
         
+        if (isset($readmeFile)) {
+            $fileInfo = pathinfo($readmeFile);
+            $ext = $fileInfo['extension'];
+            // echo $readmeFile.'<br />';
+            // echo $ext.'<br />';
+        
+            $readmeRaw = file_get_contents($currentDir.$readmeFile);
+        
+            // echo 'readmeRaw::::: '.$readmeRaw.'<br />';
+        
+            if ($ext == 'textile') {
+                require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/textile.php');
+                $textile = new Textile();
+                $readmeMarkup = $textile->TextileThis($readmeRaw);
+            } else if ($ext == 'markdown' || $ext == 'md') {
+                require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/markdown.php');
+                $readmeMarkup = Markdown($readmeRaw);
+            } else if($ext == 'html' || $ext == 'htm') {
+                $readmeMarkup = $readmeRaw;
+            } else {
+                $readmeMarkup = '<pre>'."\n".$readmeRaw."\n".'</pre>';
+            }
+        
+            $readmeMarkup = '<div id="readme">'."\n".$readmeMarkup."\n".'</div> <!-- #readme -->';
+            
+        }
     }
 
 
@@ -112,47 +116,9 @@
 
 <body>
     <?php
-        $currentDir = $absPath . '/';
-        if (is_dir($currentDir)) {
-            if ($dh = opendir($currentDir)) {
-                while (($file = readdir($dh)) !== false) {
-                    // go thru files, find the first README.*
-                    if( preg_match('/^README(\.[A-z0-9]+)?$/i', $file) && !is_dir($currentDir.$file) ) {
-                        // echo $file . '<br />';
-                        $readmeFile = $file;
-                        break;
-                    }
-                }
-                closedir($dh);
-            }
-            
-            
-            $fileInfo = pathinfo($readmeFile);
-            $ext = $fileInfo['extension'];
-            echo $readmeFile.'<br />';
-            echo $ext.'<br />';
-            
-            $readmeRaw = file_get_contents($currentDir.$readmeFile);
-            
-            echo 'readmeRaw::::: '.$readmeRaw.'<br />';
-            
-            if ($ext == 'textile') {
-                require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/textile.php');
-                $textile = new Textile();
-                $readmeMarkup = $textile->TextileThis($readmeRaw);
-            } else if ($ext == 'markdown' || $ext == 'md') {
-                require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/markdown.php');
-                $readmeMarkup = Markdown($readmeRaw);
-            } else {
-                $readmeMarkup = '<pre>'."\n".$readmeRaw."\n".'</pre>';
-            }
-            
-            
-            $readmeMarkup = '<div id="readme">'."\n".$readmeMarkup."\n".'</div> <!-- #readme -->';
-        }
+
     ?>
 
-    <!-- <p><?php echo $_SERVER['REQUEST_URI']; ?></p> -->
     
     <div id="pagecontainer">
         
