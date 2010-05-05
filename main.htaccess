@@ -16,7 +16,7 @@ IndexOptions IconHeight=24 IconWidth=24
 IndexOptions SuppressDescription
 
 HeaderName /mindexes/header.php
-ReadmeName /mindexes/footer.html
+ReadmeName /mindexes/footer.php
 
 DefaultIcon /mindexes/icons/default.png
 AddIcon /mindexes/icons/pixel.gif        ^^BLANKICON^^

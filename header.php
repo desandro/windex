@@ -28,7 +28,7 @@
     $uri = preg_replace("/\?.*$/", "", $uri);
     $uri = preg_replace("/\/ *$/", "", $uri);
     
-    $absPath = $_SERVER["DOCUMENT_ROOT"] . $uri;
+    // $absPath = $_SERVER["DOCUMENT_ROOT"] . $uri;
 
     $titletext = str_replace("%DIR", $uri, $titleFormat). '/';
 
@@ -49,8 +49,8 @@
 
 
     $readmeMarkup = '';
-    $currentDir = $absPath . '/';
-    if (is_dir($currentDir)) {
+    $currentDir = $_SERVER["DOCUMENT_ROOT"] . $uri . '/';
+    if ($showReadme && is_dir($currentDir)) {
         if ($dh = opendir($currentDir)) {
             while (($file = readdir($dh)) !== false) {
                 // go thru files, find the first README.*
@@ -76,17 +76,17 @@
             if ($ext == 'textile') {
                 require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/textile.php');
                 $textile = new Textile();
-                $readmeMarkup = $textile->TextileThis($readmeRaw);
+                $readmeContent = $textile->TextileThis($readmeRaw);
             } else if ($ext == 'markdown' || $ext == 'md') {
                 require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/markdown.php');
-                $readmeMarkup = Markdown($readmeRaw);
+                $readmeContent = Markdown($readmeRaw);
             } else if($ext == 'html' || $ext == 'htm') {
-                $readmeMarkup = $readmeRaw;
+                $readmeContent = $readmeRaw;
             } else {
-                $readmeMarkup = '<pre>'."\n".$readmeRaw."\n".'</pre>';
+                $readmeContent = '<pre>'."\n".$readmeRaw."\n".'</pre>';
             }
         
-            $readmeMarkup = '<div id="readme">'."\n".$readmeMarkup."\n".'</div> <!-- #readme -->';
+            $readmeMarkup = '<div id="readme">'."\n".'<h2 class="readme-title"><a href="'.$readmeFile.'">'.$readmeFile.'</a></h2>'."\n".$readmeContent."\n".'</div> <!-- #readme -->';
             
         }
     }
@@ -125,5 +125,4 @@
         <div class="header">
             <h1 id="page-title"><?= $h1text ?></h1>
             
-            <?= $readmeMarkup ?>
         </div>
