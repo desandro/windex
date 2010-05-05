@@ -18,7 +18,7 @@
     $titleFormat = "Index of %DIR";
     
     // indices path
-    $indicesPath = '/mindexes';
+    $mindexesPath = '/mindexes';
 
     //=======================================================================
     // (end of config)
@@ -56,7 +56,7 @@
     // }
 
     // Textile
-    // require_once( $_SERVER["DOCUMENT_ROOT"]. $indicesPath . '/textile.php');
+    // require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/textile.php');
     // $readmeFiles = glob('README.*');
     // $readmeRaw = file_get_contents($readmeFiles[0]);
     // $readmeFormatted = str_replace("\n", '<br />', $readmeRaw);
@@ -64,23 +64,28 @@
     // $textile = new Textile();
 
     // Markdown
-    // require_once( $_SERVER["DOCUMENT_ROOT"]. $indicesPath . '/markdown.php');
+    // require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/markdown.php');
     // $readmeFiles = glob( $absPath .'/README.*');
     // $readmeRaw = file_get_contents($readmeFiles[0]);
 
-    $readmeMarkup = '';
 
-    if ($showReadme) {
-        foreach (glob($absPath . '*') as $file) {
-            if( preg_match('/^README(\.[A-z0-9]+)?$/i', $file) ) {
-                $readmeFile = $file;
-                break;
-            }
-        }
-        $readmeMarkup = $readmeFile;
+    // if ($showReadme) {
+    //     foreach (glob($absPath . '*') as $file) {
+    //         if( preg_match('/^README(\.[A-z0-9]+)?$/i', $file) ) {
+    //             $readmeFile = $file;
+    //             break;
+    //         }
+    //     }
+    //     $readmeMarkup = $readmeFile;
+    // }
+    // 
+    // 
+    
+    $readmeMarkup = '';
+    $currentDir = $absPath . '/';
+    if($showReadme && is_dir($currentDir) ) {
+        
     }
-    
-    
 
 
 ?>
@@ -107,27 +112,53 @@
 
 <body>
     <?php
-    $currentDir = $absPath . '/';
-    if (is_dir($currentDir)) {
-        if ($dh = opendir($currentDir)) {
-            while (($file = readdir($dh)) !== false) {
-                // echo "filename: $file : filetype: " . filetype($dir . $file) . '<br />';
-                echo $file . '<br />';
+        $currentDir = $absPath . '/';
+        if (is_dir($currentDir)) {
+            if ($dh = opendir($currentDir)) {
+                while (($file = readdir($dh)) !== false) {
+                    // go thru files, find the first README.*
+                    if( preg_match('/^README(\.[A-z0-9]+)?$/i', $file) && !is_dir($currentDir.$file) ) {
+                        // echo $file . '<br />';
+                        $readmeFile = $file;
+                        break;
+                    }
+                }
+                closedir($dh);
             }
-            closedir($dh);
+            
+            
+            $fileInfo = pathinfo($readmeFile);
+            $ext = $fileInfo['extension'];
+            echo $readmeFile.'<br />';
+            echo $ext.'<br />';
+            
+            $readmeRaw = file_get_contents($currentDir.$readmeFile);
+            
+            echo 'readmeRaw::::: '.$readmeRaw.'<br />';
+            
+            if ($ext == 'textile') {
+                require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/textile.php');
+                $textile = new Textile();
+                $readmeMarkup = $textile->TextileThis($readmeRaw);
+            } else if ($ext == 'markdown' || $ext == 'md') {
+                require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/markdown.php');
+                $readmeMarkup = Markdown($readmeRaw);
+            } else {
+                $readmeMarkup = '<pre>'."\n".$readmeRaw."\n".'</pre>';
+            }
+            
+            
+            $readmeMarkup = '<div id="readme">'."\n".$readmeMarkup."\n".'</div> <!-- #readme -->';
         }
-    } else {
-        echo $currentDir . ' is not a dir';
-    }
     ?>
+
+    <!-- <p><?php echo $_SERVER['REQUEST_URI']; ?></p> -->
     
     <div id="pagecontainer">
         
-        <p><?php echo $_SERVER['REQUEST_URI']; ?></p>
         
         <div class="header">
             <h1><?= $h1text ?></h1>
             
             <?= $readmeMarkup ?>
-            <p><?= 'php done'?></p>
         </div>
