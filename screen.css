@@ -38,21 +38,21 @@ img {
 .header {
 }
 
-h1 {
+h1#page-title {
     font-family:  'Helvetica Neue', Arial, sans-serif;
     font-weight: 100;
     font-size: 22px;
     margin-top: 0;
 }
 
-h1 strong { font-weight: 500;}
+h1#page-title strong { font-weight: 500;}
 
-h1 a {
+h1#page-title a {
     color: #222;
     border-bottom: 2px solid transparent;
 }
 
-h1 a:hover {
+h1#page-title a:hover {
     color: #16C;
     text-decoration: none;
     border-color: #16C;
@@ -154,3 +154,11 @@ img[src^="/icons"] {
     display: none;
 }
 
+/* readme style */
+
+#pagecontainer pre {
+    border: 1px solid #CCC;
+    padding: 10px;
+    overflow-x: scroll;
+    background: #EEE;
+}

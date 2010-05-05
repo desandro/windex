@@ -156,9 +156,8 @@
     
     <div id="pagecontainer">
         
-        
         <div class="header">
-            <h1><?= $h1text ?></h1>
+            <h1 id="page-title"><?= $h1text ?></h1>
             
             <?= $readmeMarkup ?>
         </div>
