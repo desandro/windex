@@ -1,8 +1,8 @@
 #========================================================================
 # .htaccess file for Mindexes
 #
-# Place this file at the top of the directory tree whose directory
-# mindexes you want to affect.  Be sure that the file paths
+# Copy the contents of this file at the top of the directory tree whose 
+# directory Mindexes you want to affect.  Be sure that the file paths
 # point to the correct absolute URL of mindexes/ on your server.
 #
 #========================================================================
@@ -19,15 +19,16 @@ HeaderName /mindexes/header.php
 ReadmeName /mindexes/footer.php
 
 DefaultIcon /mindexes/icons/default.png
-AddIcon /mindexes/icons/pixel.gif        ^^BLANKICON^^
-AddIcon /mindexes/icons/pixel.gif         ..
-AddIcon /mindexes/icons/dir.png          ^^DIRECTORY^^
-AddIcon /mindexes/icons/text.png         .txt .text .textile
-AddIcon /mindexes/icons/textmate.png        .htaccess .js .css .html .htm .php
+
+AddIcon /mindexes/icons/pixel.gif       ^^BLANKICON^^
+AddIcon /mindexes/icons/pixel.gif       ..
+AddIcon /mindexes/icons/dir.png         ^^DIRECTORY^^
+AddIcon /mindexes/icons/text.png        .txt .text .textile
+AddIcon /mindexes/icons/textmate.png    .htaccess .js .css .html .htm .php
 AddIcon /mindexes/icons/img.png         .jpg .jpeg .png .gif .tif .tiff .ico
-AddIcon /mindexes/icons/ai.png         .ai .eps
+AddIcon /mindexes/icons/ai.png          .ai .eps
 AddIcon /mindexes/icons/doc.png         .doc .docx
-AddIcon /mindexes/icons/movie.png         .mov .qt .avi .wmv
+AddIcon /mindexes/icons/movie.png       .mov .qt .avi .wmv
 AddIcon /mindexes/icons/mp3.png         .mp3 .ogg .wav .m4a
 AddIcon /mindexes/icons/pdf.png         .pdf
 AddIcon /mindexes/icons/ppt.png         .ppt .pptx
