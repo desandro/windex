@@ -1,15 +1,19 @@
 body {
     font-family:  'Lucida Grande', 'Verdana', 'Helvetica Neue', Arial, sans-serif;
     font-size: 13px;
-    background: #EEE;
+    background: #F3F3F3;
     color: #222;
 }
 
-#container {
-    width: 700px;
+#wrap {
+    width: 740px;
     margin: 40px auto;
+}
+
+#dirlist {
     background: white;
     padding: 20px;
+    margin-bottom: 40px;
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
             border-radius: 10px;
@@ -155,12 +159,6 @@ img[src^="/icons"] {
 }
 
 /* readme style */
-
-#readme {
-width: 740px;
-margin: 40px auto;
-    
-}
 
 h2.readme-title {
     font-size: 0.95em;

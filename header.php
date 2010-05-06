@@ -23,7 +23,9 @@
 
 <body>
     
-    <div id="container">
+<div id="wrap">    
+    
+    <div id="dirlist">
         
         <h1 id="page-title"><?= $h1text ?></h1>
 

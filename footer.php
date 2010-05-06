@@ -1,8 +1,10 @@
 <?php require_once('config.php'); ?>
 
-    </div> <!-- #container -->
+    </div> <!-- #dirlist -->
 
-<?= $readmeMarkup ?>
+    <?= $readmeMarkup ?>
+
+</div> <!-- #wrap -->
 
 
 </body>
