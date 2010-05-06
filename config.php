@@ -44,8 +44,10 @@
         for ($j=0; $j < $backCount; $j++) { 
             $link .= '../';
         }
-        $pathMarkup .= '<strong><a href="'.$link.'">'.$folder.'/</a></strong>';
+        $pathMarkup .= '<a href="'.$link.'">'.$folder.'/</a>';
     }    
+    
+    $pathMarkup = '<strong>'.$pathMarkup.'</strong>';
     
     $h1text = str_replace("%DIR", $pathMarkup, $titleFormat);
     
