@@ -22,12 +22,32 @@ a:hover {
 	text-decoration: underline;
 }
 
+h1#page-title {
+    font-size: 250%;
+    margin: 0 0 0.2em 0;
+    line-height: 0.9;
+    text-shadow: 0 1px 0 #fff;
+    color: #cc0f16;
+    letter-spacing: -1px;
+}
+
+h1#page-title strong {
+    display: block;
+	border-bottom: 1px solid #ddd;
+	font-size: 50%;
+	line-height: 1.8em;
+	letter-spacing: -0.03em;
+}
+
+/**** Table styling ****/
+
 tr a { font-weight: bold;}
 
-table {
+#dirlist table {
     padding: 0px;
     border-collapse: collapse;
     width: 100%;
+    border-bottom: 1px solid #DDD;
 }
 
 tr:nth-child(even) { background: rgba(0,0,0,0.03); }
@@ -102,22 +122,7 @@ td a[href^="/"],
 td a[href^="/"]:hover { background: url(/mindexes/icons/up-arrow.png) right center no-repeat; }
 td a[href^="/"]:hover { color: #111;}
 
-h1#page-title {
-    font-size: 250%;
-    margin: 0 0 0.2em 0;
-    line-height: 0.9;
-    text-shadow: 0 1px 0 #fff;
-    color: #cc0f16;
-    letter-spacing: -1px;
-}
 
-h1#page-title strong {
-    display: block;
-	border-bottom: 1px solid #ddd;
-	font-size: 50%;
-	line-height: 1.8em;
-	letter-spacing: -0.03em;
-}
 
 /**** README ****/
 
