@@ -156,6 +156,12 @@ img[src^="/icons"] {
 
 /* readme style */
 
+#readme {
+width: 740px;
+margin: 40px auto;
+    
+}
+
 h2.readme-title {
     font-size: 0.95em;
     padding-bottom: 0.4em;
@@ -164,9 +170,9 @@ h2.readme-title {
 h2.readme-title a { color: #222; }
 h2.readme-title a:hover { color: #26D; }
 
-#pagecontainer pre {
+#readme pre {
     border: 1px solid #CCC;
     padding: 10px;
     overflow-x: scroll;
-    background: #F5F5F5;
+    background: #FFF;
 }
