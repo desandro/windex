@@ -34,11 +34,11 @@ Installation
 License
 -------
 
-This software is free to use and modify.  You may not charge for or sell this software, nor any derivation of it. (if you do modify it, please drop me a line and let me know.)
+This software is free to use and modify.  You may not charge for or sell this software, nor any derivation of it. If you do modify it, we would love to hear about it. Give us a holler and let us know.
 
 Changelog
 ---------
 
 * **v1.0** Original release
 
-Mindexes is a mod of [Indices](http://antisleep.com/software/indices), originally developed by Scott Evans.
+Mindexes is a mod of [Indices](http://antisleep.com/indices/), originally developed by Scott Evans.
