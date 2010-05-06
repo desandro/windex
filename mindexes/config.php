@@ -22,6 +22,7 @@
     // End of config
     //=======================================================================    
     
+    // URI of current directory-
     $uri = urldecode($_SERVER['REQUEST_URI']);
     $uri = preg_replace("/\?.*$/", "", $uri);
     $uri = preg_replace("/\/ *$/", "", $uri);
