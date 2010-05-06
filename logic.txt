@@ -1,3 +1,0 @@
-if showreadme == true
-    get the first file that matches README?.
-    if 
