@@ -1,9 +1,8 @@
-* { margin: 0; padding: 0; }
-
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 18px;
     -webkit-text-size-adjust: none;
+    margin: 0; padding: 0;
 }
 
 table{
@@ -13,9 +12,10 @@ table{
 
 table, tbody, tr, th, td {
     display: block;
+    margin: 0; padding: 0;
 }
 
-h1 {
+#container h1 {
     display: none;
 }
 
@@ -212,5 +212,35 @@ tr td:nth-child(5) { display: none;}
 
 /* hide ugly Apache icons */
 img[src^="/icons"] {
-    display: none;
+    visibility: hidden;
 }
+
+/**** README contents ****/
+
+/* Un-comment this next line if you'd prefer no README files in the iPhone view */
+/*#readme { display: none; }*/
+
+#readme {
+    background: #EEE;
+    padding: 10px;
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
+h2.readme-title {
+    font-size: 0.95em;
+    border-bottom: 1px solid #CCC;
+}
+h2.readme-title a {
+    text-decoration: none;
+}
+
+#readme h1 { font-size: 1.2em; }
+#readme h2 { font-size: 1.15em; }
+#readme h2 { font-size: 1.1em; }
+
+#readme pre {
+    background: #FFF;
+    padding: 10px;
+}
+

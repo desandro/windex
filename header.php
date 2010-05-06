@@ -14,17 +14,15 @@
 
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content=" initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-    
 
-    <link rel="stylesheet" media="screen and (max-device-width: 480px)" href="/mindexes/iphone.css" />
-    <link rel="stylesheet" media="screen and (min-device-width: 481px)" href="/mindexes/screen.css">
-
+    <link rel="stylesheet" media="screen and (max-device-width: 480px)" href="<?= $mindexesPath ?>/iphone.css" />
+    <link rel="stylesheet" media="screen and (min-device-width: 481px)" href="<?= $mindexesPath ?>/screen.css">
 
 </head>
 
 <body>
     
-    <div id="pagecontainer">
+    <div id="container">
         
         <h1 id="page-title"><?= $h1text ?></h1>
 

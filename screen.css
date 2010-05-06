@@ -5,7 +5,7 @@ body {
     color: #222;
 }
 
-#pagecontainer {
+#container {
     width: 700px;
     margin: 40px auto;
     background: white;
@@ -151,7 +151,7 @@ tr td:nth-child(5) { display: none;}
 
 /* hide ugly Apache icons */
 img[src^="/icons"] {
-    display: none;
+   visibility: hidden;
 }
 
 /* readme style */
