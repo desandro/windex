@@ -1,3 +1,5 @@
+Add disclaimer about turning on directory indexes on a public website
+
 Okay
 ----
 
@@ -30,5 +32,7 @@ Possible names
 ** folder style
 
 * xray vision
+
+* windex
 
 You are exposing 'naked' folder contents. Present them fashionably

@@ -15,10 +15,10 @@ Authors
 Features
 --------
 
-* Clean, minimally styled directory listings
-* iPhone-optimized view
-* Nice default icons
-* README file contents parsed and appended to pages
+* __Clean, minimally styled directory listings.__ Windex comes with two lovely themes, screen-castro.css mimics Firefox's local index view, screen-waldemar.css mimics Opera's. Add your own theme by creating another css file and linking to in header.php.
+* __iPhone-optimized view.__
+* __Nice default icons.__
+* __README file contents parsed and appended to pages.__ Windex looks for README files and adds them to index pages. It will parse documents marked up with Textile (README.textile) or Markdown (README.markdown, README.md). This option can be disabled in config.php.
 
 Installation
 ------------

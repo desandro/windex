@@ -4,10 +4,8 @@
     // A few configuration values.  Change these as you see fit.
     //=======================================================================
 
-    // showReadme
-    //   If true, the contents of a README file will appear after
-    //   the directory listing.  
-    $showReadme = true;
+
+    // Mindexes path
 
     // titleFormat
     //   How to format the <title> and <h1> text.  %DIR is replaced with the directory path.
@@ -15,8 +13,10 @@
     //   $titleFormat = "Now Viewing: %DIR";
     $titleFormat = "Index of %DIR";
 
-    // indices path
-    $mindexesPath = '/mindexes';
+    // showReadme
+    //   If true, the contents of a README file will appear after
+    //   the directory listing.  
+    $showReadme = true;
 
     //=======================================================================
     // End of config
