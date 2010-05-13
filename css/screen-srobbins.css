@@ -3,6 +3,8 @@ body {
     font-size: 14px;
     background: #222;
     color: #EEE;
+    background-image: -moz-radial-gradient(center top, circle cover, #363636 0%, #202020 100%);
+    background-image: -webkit-gradient(radial, center top, 0,  center top, 800, from(#363636), to(#202020) ); 
 }
 
 #wrap {
@@ -83,7 +85,6 @@ td {
 }
 
 td a {
-    font-style: italic;
 }
 
 td a:hover {
@@ -126,7 +127,7 @@ td a[href^="/"] {
     font-weight: normal;
 }
 td a[href^="/"],
-td a[href^="/"]:hover { background: url(/mindexes/mindexes/icons/up-arrow.png) right center no-repeat; }
+td a[href^="/"]:hover { background: url(/mindexes/icons/up-arrow.png) right center no-repeat; }
 td a[href^="/"]:hover { color: #C31;}
 
 /* all cells in ICON column */
@@ -178,8 +179,8 @@ h2.readme-title a { color: #222; }
 h2.readme-title a:hover { color: #26D; }
 
 #readme pre {
-    border: 1px solid #CCC;
+    border: 1px solid #333;
     padding: 10px;
     overflow-x: scroll;
-    background: #FFF;
+    background: #111;
 }

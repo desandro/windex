@@ -6,6 +6,7 @@
 
 
     // Mindexes path
+    $mindexesPath = '/mindexes';
 
     // titleFormat
     //   How to format the <title> and <h1> text.  %DIR is replaced with the directory path.
