@@ -16,7 +16,7 @@
     <meta name="viewport" content=" initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 
     <link rel="stylesheet" media="screen and (max-width: 480px)" href="<?= $mindexesPath ?>/css/iphone.css" />
-    <link rel="stylesheet" media="screen and (min-width: 481px)" href="<?= $mindexesPath ?>/css/screen-srobbins.css">
+    <link rel="stylesheet" media="screen and (min-width: 481px)" href="<?= $mindexesPath ?>/css/screen-waldemar.css">
 
 </head>
 

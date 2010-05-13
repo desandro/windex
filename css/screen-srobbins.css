@@ -1,10 +1,11 @@
 body {
-    font-family:  Georgia;
+    font-family: Georgia;
     font-size: 14px;
     background: #222;
     color: #EEE;
     background-image: -moz-radial-gradient(center top, circle cover, #363636 0%, #202020 100%);
     background-image: -webkit-gradient(radial, center top, 0,  center top, 800, from(#363636), to(#202020) ); 
+    background-repeat: no-repeat;
 }
 
 #wrap {
@@ -151,8 +152,9 @@ tr td:nth-child(3),
 tr td:nth-child(4) {
     text-align: right;
     padding-left: 10px;
-    font-size: 13px;
+    font-size: 12px;
     color: #BBB;
+    letter-spacing: 0.05em;
 }
 
 /* Hide Description column*/
@@ -175,12 +177,12 @@ h2.readme-title {
     padding-bottom: 0.4em;
     border-bottom: 1px solid #DDD;
 }
-h2.readme-title a { color: #222; }
-h2.readme-title a:hover { color: #26D; }
+h2.readme-title a { color: #888; }
+h2.readme-title a:hover { color: #E31; }
 
 #readme pre {
     border: 1px solid #333;
     padding: 10px;
     overflow-x: scroll;
-    background: #111;
+    background: #1D1D1D;
 }
