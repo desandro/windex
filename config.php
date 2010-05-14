@@ -4,9 +4,8 @@
     // A few configuration values.  Change these as you see fit.
     //=======================================================================
 
-
     // Windex path
-    $mindexesPath = '/windex';
+    $windexPath = '/windex';
 
     // titleFormat
     //   How to format the <title> and <h1> text.  %DIR is replaced with the directory path.
@@ -78,11 +77,11 @@
             $readmeRaw = file_get_contents($currentDir.$readmeFile);
         
             if ($ext == 'textile') {
-                require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/textile.php');
+                require_once( $_SERVER["DOCUMENT_ROOT"]. $windexPath . '/textile.php');
                 $textile = new Textile();
                 $readmeContent = $textile->TextileThis($readmeRaw);
             } else if ($ext == 'markdown' || $ext == 'md') {
-                require_once( $_SERVER["DOCUMENT_ROOT"]. $mindexesPath . '/markdown.php');
+                require_once( $_SERVER["DOCUMENT_ROOT"]. $windexPath . '/markdown.php');
                 $readmeContent = Markdown($readmeRaw);
             } else if($ext == 'html' || $ext == 'htm') {
                 $readmeContent = $readmeRaw;
