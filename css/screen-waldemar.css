@@ -111,7 +111,7 @@ td a[href*="/"] {
 }
 td a[href*="/"]:hover {
     color: #0174A7;
-    background: url(/mindexes/icons/pointer-small.png) right center no-repeat;;
+    background: url(/windex/icons/pointer-small.png) right center no-repeat;;
 }
 
 /* Parent Directory link  */
@@ -119,7 +119,7 @@ td a[href^="/"] {
     color: #0174A7;
 }
 td a[href^="/"],
-td a[href^="/"]:hover { background: url(/mindexes/icons/up-arrow.png) right center no-repeat; }
+td a[href^="/"]:hover { background: url(/windex/icons/up-arrow.png) right center no-repeat; }
 td a[href^="/"]:hover { color: #111;}
 
 

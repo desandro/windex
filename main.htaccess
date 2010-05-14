@@ -1,9 +1,9 @@
 #========================================================================
-# .htaccess file for Mindexes
+# .htaccess file for Windex
 #
 # Copy the contents of this file at the top of the directory tree whose 
-# directory Mindexes you want to affect.  Be sure that the file paths
-# point to the correct absolute URL of mindexes/ on your server.
+# directory Windex you want to affect.  Be sure that the file paths
+# point to the correct absolute URL of windex/ on your server.
 #
 #========================================================================
 
@@ -15,23 +15,23 @@ IndexOptions SuppressHTMLPreamble SuppressRules HTMLTable
 IndexOptions IconHeight=24 IconWidth=24
 IndexOptions SuppressDescription
 
-HeaderName /mindexes/header.php
-ReadmeName /mindexes/footer.php
+HeaderName /windex/header.php
+ReadmeName /windex/footer.php
 
-DefaultIcon /mindexes/icons/default.png
+DefaultIcon /windex/icons/default.png
 
-AddIcon /mindexes/icons/pixel.gif       ^^BLANKICON^^
-AddIcon /mindexes/icons/pixel.gif       ..
-AddIcon /mindexes/icons/dir.png         ^^DIRECTORY^^
-AddIcon /mindexes/icons/text.png        .txt .text .textile
-AddIcon /mindexes/icons/textmate.png    .htaccess .js .css .html .htm .php
-AddIcon /mindexes/icons/img.png         .jpg .jpeg .png .gif .tif .tiff .ico
-AddIcon /mindexes/icons/ai.png          .ai .eps
-AddIcon /mindexes/icons/doc.png         .doc .docx
-AddIcon /mindexes/icons/movie.png       .mov .qt .avi .wmv
-AddIcon /mindexes/icons/mp3.png         .mp3 .ogg .wav .m4a
-AddIcon /mindexes/icons/pdf.png         .pdf
-AddIcon /mindexes/icons/ppt.png         .ppt .pptx
-AddIcon /mindexes/icons/psd.png         .psd .psb
-AddIcon /mindexes/icons/xls.png         .xls .xlsx
-AddIcon /mindexes/icons/zip.png         .zip .bin .tar .rar .tgz .7z
+AddIcon /windex/icons/pixel.gif       ^^BLANKICON^^
+AddIcon /windex/icons/pixel.gif       ..
+AddIcon /windex/icons/dir.png         ^^DIRECTORY^^
+AddIcon /windex/icons/text.png        .txt .text .textile
+AddIcon /windex/icons/textmate.png    .htaccess .js .css .html .htm .php
+AddIcon /windex/icons/img.png         .jpg .jpeg .png .gif .tif .tiff .ico
+AddIcon /windex/icons/ai.png          .ai .eps
+AddIcon /windex/icons/doc.png         .doc .docx
+AddIcon /windex/icons/movie.png       .mov .qt .avi .wmv
+AddIcon /windex/icons/mp3.png         .mp3 .ogg .wav .m4a
+AddIcon /windex/icons/pdf.png         .pdf
+AddIcon /windex/icons/ppt.png         .ppt .pptx
+AddIcon /windex/icons/psd.png         .psd .psb
+AddIcon /windex/icons/xls.png         .xls .xlsx
+AddIcon /windex/icons/zip.png         .zip .bin .tar .rar .tgz .7z

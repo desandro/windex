@@ -4,7 +4,7 @@
 <html>
 <head>
     <!--
-         Minimal directory listings generated with Mindexes
+         Minimal directory listings generated with Windex
          
          A mod of Indices:
          http://antisleep.com/software/indices

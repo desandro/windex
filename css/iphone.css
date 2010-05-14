@@ -50,8 +50,8 @@ td a:hover {
 }
 
 /* directory links*/
-td a[href*="/"] { background: url(/mindexes/icons/pointer-gray.png) right center no-repeat; }
-td a[href*="/"]:hover { background-image: url(/mindexes/icons/pointer-white.png); }
+td a[href*="/"] { background: url(/windex/icons/pointer-gray.png) right center no-repeat; }
+td a[href*="/"]:hover { background-image: url(/windex/icons/pointer-white.png); }
 
 
 tr td:first-child,
@@ -181,7 +181,7 @@ td a[href^="/"]:before {
     border-style: solid;
     position: absolute;
     width: 20px;
-    background: url(/mindexes/icons/pointer-left-mask.png) no-repeat;
+    background: url(/windex/icons/pointer-left-mask.png) no-repeat;
     height: 32px;
     top: -4px;
     left: -4px;

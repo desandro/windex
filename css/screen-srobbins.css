@@ -128,7 +128,7 @@ td a[href^="/"] {
     font-weight: normal;
 }
 td a[href^="/"],
-td a[href^="/"]:hover { background: url(/mindexes/icons/up-arrow.png) right center no-repeat; }
+td a[href^="/"]:hover { background: url(/windex/icons/up-arrow.png) right center no-repeat; }
 td a[href^="/"]:hover { color: #C31;}
 
 /* all cells in ICON column */
