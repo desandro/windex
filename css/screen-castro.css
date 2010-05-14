@@ -7,7 +7,7 @@ body {
 
 #wrap {
     width: 740px;
-    margin: 40px auto;
+    margin: 40px auto 80px;
 }
 
 #dirlist {
@@ -159,6 +159,10 @@ img[src^="/icons"] {
 }
 
 /* readme style */
+
+#readme {
+    line-height: 1.45em;
+}
 
 h2.readme-title {
     font-size: 0.95em;
