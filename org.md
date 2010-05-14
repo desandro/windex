@@ -1,4 +1,3 @@
-Add disclaimer about turning on directory indexes on a public website
 
 Okay
 ----
