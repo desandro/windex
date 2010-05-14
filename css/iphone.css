@@ -93,12 +93,12 @@ tr:hover td:nth-child(4) { color: #FFF;}
 tr:first-child {
     background: #6E829E;
     background: -moz-linear-gradient(-90deg, #A0ADC0, #7588A3 50%, #6E829E 50%,  #5A6F8F);
-    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#A0ADC0),
-        color-stop(50%, #7588A3), color-stop(50%, #6E829E), 
-        to(#5A6F8F) );
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#E0E4E7),
+        color-stop(50%, #C8CFD4), color-stop(50%, #C5CCD2), 
+        to(#B5BEC6) );
     height: 42px;    
     border-top: 1px solid #CFD6E0;
-    border-bottom: 1px solid #212832;
+    border-bottom: 1px solid #727D85;
     
 }
 
@@ -123,17 +123,17 @@ td a[href^="/"] {
     padding: 0 10px;
     background: #4A6594;
     background: -moz-linear-gradient(-90deg, #7B92B3, #4A6594 50%, #385588 50%,  #3A5789);
-    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#7B92B3),
-        color-stop(50%, #4A6594), color-stop(50%, #385588), 
-        to(#3A5789) );
+    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#bcc7d4),
+        color-stop(50%, #96a9bf), color-stop(50%, #829ab1), 
+        to(#8396ad) );
     border: 1px solid;
-    border-color: #24282F #3E506C #3E506C;
+    border-color: #727D85;
     margin-top: 7px;
     margin-right: 0;
     -webkit-box-shadow: 0 1px hsla(0,0%,100%,.3);
        -moz-box-shadow: 0 1px hsla(0,0%,100%,.3);
             box-shadow: 0 1px hsla(0,0%,100%,.3);
-    text-shadow: 0 -1px hsla(0,0%,0%,.7);
+    text-shadow: 0 -1px hsla(0,0%,0%,.4);
 }
 
 th:nth-child(2) a {
@@ -181,7 +181,7 @@ td a[href^="/"]:before {
     border-style: solid;
     position: absolute;
     width: 20px;
-    background: url(/windex/icons/pointer-left-mask.png) no-repeat;
+    background: url(/windex/icons/pointer-left-mask3.png) no-repeat;
     height: 32px;
     top: -4px;
     left: -4px;
@@ -200,10 +200,10 @@ td a[href^="/"]:after {
 th a:hover,
 td a[href^="/"]:hover {
     background: #2C3B64;
-    background: -moz-linear-gradient(-90deg, #697493, #2C3B64 50%, #1C2D57 50%,  #1D2E59);
+    background: -moz-linear-gradient(-90deg, #697493, #4A6594 50%, #385588 50%,  #3A5789);
     background: -webkit-gradient(linear, 0 top, 0 bottom, from(#697493),
-        color-stop(50%, #2C3B64), color-stop(50%, #1C2D57), 
-        to(#1D2E59) );
+        color-stop(50%, #4A6594), color-stop(50%, #385588), 
+        to(#3A5789) );
     
 }
 
