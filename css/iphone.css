@@ -92,7 +92,7 @@ tr:hover td:nth-child(4) { color: #FFF;}
 
 tr:first-child {
     background: #6E829E;
-    background: -moz-linear-gradient(-90deg, #A0ADC0, #7588A3 50%, #6E829E 50%,  #5A6F8F);
+    background: -moz-linear-gradient(-90deg, #E0E4E7, #C8CFD4 50%, #C5CCD2 50%,  #B5BEC6);
     background: -webkit-gradient(linear, 0 top, 0 bottom, from(#E0E4E7),
         color-stop(50%, #C8CFD4), color-stop(50%, #C5CCD2), 
         to(#B5BEC6) );
@@ -121,11 +121,7 @@ td a[href^="/"] {
     height: 26px;
     line-height: 26px;
     padding: 0 10px;
-    background: #4A6594;
-    background: -moz-linear-gradient(-90deg, #7B92B3, #4A6594 50%, #385588 50%,  #3A5789);
-    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#bcc7d4),
-        color-stop(50%, #96a9bf), color-stop(50%, #829ab1), 
-        to(#8396ad) );
+    background-color: #829ab1;
     border: 1px solid;
     border-color: #727D85;
     margin-top: 7px;
@@ -134,6 +130,16 @@ td a[href^="/"] {
        -moz-box-shadow: 0 1px hsla(0,0%,100%,.3);
             box-shadow: 0 1px hsla(0,0%,100%,.3);
     text-shadow: 0 -1px hsla(0,0%,0%,.4);
+}
+
+th a,
+td a[href^="/"],
+td a[href^="/"]:hover {
+    background-image: -moz-linear-gradient(-90deg, hsla(0,0%,100%,.45), 
+        hsla(0,0%,100%,.15)  50%, hsla(0,0%,100%,.0) 50%,  hsla(0,0%,100%,.15) );
+    background-image: -webkit-gradient(linear, 0 top, 0 bottom, from( hsla(0,0%,100%,.45) ),
+        color-stop(50%, hsla(0,0%,100%,.15) ), color-stop(50%, hsla(0,0%,100%,.0) ), 
+        to( hsla(0,0%,100%,.15) ) );    
 }
 
 th:nth-child(2) a {
@@ -199,12 +205,7 @@ td a[href^="/"]:after {
 
 th a:hover,
 td a[href^="/"]:hover {
-    background: #2C3B64;
-    background: -moz-linear-gradient(-90deg, #697493, #4A6594 50%, #385588 50%,  #3A5789);
-    background: -webkit-gradient(linear, 0 top, 0 bottom, from(#697493),
-        color-stop(50%, #4A6594), color-stop(50%, #385588), 
-        to(#3A5789) );
-    
+    background-color: #2546C0;
 }
 
 /* Hide Description column*/
@@ -223,7 +224,7 @@ img[src^="/icons"] {
 #readme {
     background: #EEE;
     padding: 10px;
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 1.4em;
 }
 
