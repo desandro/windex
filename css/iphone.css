@@ -240,7 +240,7 @@ h2.readme-title a {
 #readme h2 { font-size: 1.15em; }
 #readme h2 { font-size: 1.1em; }
 
-#readme pre, #readme code {
+#readme pre {
     background: #FFF;
     padding: 10px;
     font-size: 90%;
