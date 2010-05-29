@@ -187,7 +187,7 @@ td a[href^="/"]:before {
     border-style: solid;
     position: absolute;
     width: 20px;
-    background: url(/windex/icons/pointer-left-mask3.png) no-repeat;
+    background: url(/windex/icons/pointer-left-mask.png) no-repeat;
     height: 32px;
     top: -4px;
     left: -4px;
