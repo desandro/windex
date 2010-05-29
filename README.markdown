@@ -30,13 +30,15 @@ HEADS UP
 Installation
 ------------
 
-1. Copy the entire windex folder into your site's directory tree. For instance, if your site's files are in _/www/mysite.com/files_, upload this folder to be _/www/mysite.com/files/windex_.
+1. Copy the entire windex folder into your site's directory tree. For instance, if your site's files are in _/www/mysite.com_, upload this folder to be _/www/mysite.com/windex_.
 
-2. Edit windex/config.php and change any configuration options. `$windexPath` is the absolute path of where the windex folder can be found. If your placed the folder to be _/www/mysite.com/files/windex_, you would change this line to be `$windexPath = '/files/windex';`. 
+2. Edit windex/config.php and change any configuration options. 
 
-3. Copy and paste the contents of _main.htaccess_ into a file named _.htaccess_ in your site's files directory. DO NOT overwrite the contents of the previous _.htaccess_, as this code is essential to any CMS you may be running. Instead, add the code from _main.htaccess_ after the previous code. If necessary, change the file paths to the absolute path of the Windex folder (i.e. `/files/windex/...`). _.htaccess_ is a hidden configuration file. If this file does not exist you can rename _main.htaccess_ as _.htaccess_ and upload it.  **NOTE:**  it helps to know what you're doing before jumping in.  The supplied _.htaccess_ file may end up overriding some of your site's configuration and causing weird behavior. So understand what you're doing here, and merge your existing directory config with the contents of _main.htaccess_.
+3. Copy and paste the contents of _main.htaccess_ into a file named _.htaccess_ in the directory where you want to enable Windex. For example, if you wish to enable Windex in _/www/mysite.com/windex/files_, you would add the _.htaccess_ file to be _/www/mysite.com/windex/files/.htaccess_  DO NOT overwrite the contents of the previous _.htaccess_, as this code is essential to any CMS you may be running. Instead, add the code from _main.htaccess_ after the previous code. _.htaccess_ is a hidden configuration file. If this file does not exist you can rename _main.htaccess_ as _.htaccess_ and upload it.  **NOTE:**  it helps to know what you're doing before jumping in.  
 
 4. Try it out!  Browse to a directory that does not contain an index file.
+
+If you'd rather not have the windex folder sitting at the top of your site, you'll need to change the filepaths in _config.php_, all CSS files, and any _.htaccess_ file derived from _main.htaccess_
 
 If you wish disable an index page for any child folder, you'll need to upload a _.htaccess_ file in that folder with the following code:
 
