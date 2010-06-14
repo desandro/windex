@@ -80,7 +80,7 @@
                 require_once( $_SERVER["DOCUMENT_ROOT"]. $windexPath . '/textile.php');
                 $textile = new Textile();
                 $readmeContent = $textile->TextileThis($readmeRaw);
-            } else if ($ext == 'markdown' || $ext == 'md') {
+            } else if ($ext == 'markdown' || $ext == 'md' || $ext == 'mdown') {
                 require_once( $_SERVER["DOCUMENT_ROOT"]. $windexPath . '/markdown.php');
                 $readmeContent = Markdown($readmeRaw);
             } else if($ext == 'html' || $ext == 'htm') {
