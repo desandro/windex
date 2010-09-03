@@ -1,10 +1,12 @@
+html {
+  -webkit-text-size-adjust: none;
+}
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 18px;
-    -webkit-text-size-adjust: none;
     margin: 0; padding: 0;
 }
-
 table{
     border-collapse:collapse;
     border-spacing:0;
@@ -195,25 +197,19 @@ td a[href^="/"] {
     color: transparent;
     text-shadow: none;
     width: 42px;
-    overflow: visible;
+    overflow: hidden;
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
             border-radius: 5px;
+    -webkit-border-top-left-radius: 28px 16px;
+        -moz-border-radius-topleft: 28px 16px;
+            border-top-left-radius: 28px 16px;
+    -webkit-border-bottom-left-radius: 28px 16px;
+        -moz-border-radius-bottomleft: 28px 16px;
+            border-bottom-left-radius: 28px 16px;
 }
 td a[href^="/"]:hover {
     color: transparent;
-}
-
-td a[href^="/"]:before {
-    content: '';
-    display: block;
-    border-style: solid;
-    position: absolute;
-    width: 20px;
-    background: url(/windex/icons/pointer-left-mask.png) no-repeat;
-    height: 32px;
-    top: -4px;
-    left: -4px;
 }
 
 td a[href^="/"]:after {
