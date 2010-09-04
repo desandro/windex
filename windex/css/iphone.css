@@ -201,12 +201,13 @@ td a[href^="/"] {
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
             border-radius: 5px;
-    -webkit-border-top-left-radius: 28px 16px;
-        -moz-border-radius-topleft: 28px 16px;
-            border-top-left-radius: 28px 16px;
-    -webkit-border-bottom-left-radius: 28px 16px;
-        -moz-border-radius-bottomleft: 28px 16px;
-            border-bottom-left-radius: 28px 16px;
+    -webkit-border-top-left-radius: 16px;
+        -moz-border-radius-topleft: 16px;
+            border-top-left-radius: 16px;
+    -webkit-border-bottom-left-radius: 16px;
+        -moz-border-radius-bottomleft: 16px;
+            border-bottom-left-radius: 16px;
+}
 }
 td a[href^="/"]:hover {
     color: transparent;
