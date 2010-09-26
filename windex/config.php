@@ -73,7 +73,7 @@
         
         if (isset($readmeFile)) {
             $fileInfo = pathinfo($readmeFile);
-            $ext = $fileInfo['extension'];
+            $ext = isset($fileInfo['extension']) ? $fileInfo['extension'] : '';
             $readmeRaw = file_get_contents($currentDir.$readmeFile);
         
             if ($ext == 'textile') {
