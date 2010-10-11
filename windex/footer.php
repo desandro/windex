@@ -2,7 +2,7 @@
 
     </div> <!-- #dirlist -->
 
-    <?= $readmeMarkup ?>
+    <?php echo $readmeMarkup ?>
 
 </div> <!-- #wrap -->
 
