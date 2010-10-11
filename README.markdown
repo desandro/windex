@@ -1,7 +1,7 @@
 Windex - For a bright, shiny index
 ==================================
 
-**v1.0 beta**
+**v1.04**
 
 Windex uses PHP and Apache to style default directory listing index pages. It works directly with Apache's built-in directory mechanism. 
 
@@ -18,7 +18,7 @@ Features
 * **Styled directory listings.** Windex comes with three lovely themes. Add your own theme by creating another CSS file and linking to in _header.php_.
 * **iPhone-optimized view.** Shrink any browser to less than 480 pixels wide and you'll have a theme tailored specifically for mobile devices, perfect for the iPhone.
 * **Nice default icons.**
-* **README file contents parsed and appended to pages.** Windex looks for README files and adds them to index pages. It will parse documents marked up with Textile (_README.textile_) or Markdown (_README.markdown_, _README.md_). This option can be disabled in config.php.
+* **README file contents parsed and appended to pages.** Windex looks for README files and adds them to index pages. It will parse documents marked up with Textile (_README.textile_) or Markdown (_README.markdown_, _README.md_, _README.mdown_). This option can be disabled in config.php.
 
 Windex themes make liberal use of CSS3. Viewing experiences in legacy browsers may differ.
 
