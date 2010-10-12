@@ -11,13 +11,13 @@
          http://antisleep.com/software/indices
     -->
     
-    <title><?php echo$titletext?></title>
+    <title><?php echo $titletext; ?></title>
 
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content=" initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 
-    <link rel="stylesheet" media="screen and (max-width: 480px)" href="<?php echo $windexPath ?>/css/iphone.css" />
-    <link rel="stylesheet" media="screen and (min-width: 481px)" href="<?php echo $windexPath ?>/css/screen-foxy.css" />
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="<?php echo $windexPath; ?>/css/iphone.css" />
+    <link rel="stylesheet" media="screen and (min-width: 481px)" href="<?php echo $windexPath; ?>/css/screen-foxy.css" />
 
 </head>
 
@@ -27,5 +27,5 @@
     
     <div id="dirlist">
         
-        <h1 id="page-title"><?php echo $h1text ?></h1>
+        <h1 id="page-title"><?php echo $h1text; ?></h1>
 
