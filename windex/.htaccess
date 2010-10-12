@@ -1,4 +1,5 @@
 # In order for the PHP file to execute in a header, need to have a major type of text
 AddType text/html .php
+# If your server is running PHP5, change `x-httpd-php` to `x-httpd-php5`
 AddHandler application/x-httpd-php .php
 Options -Indexes
