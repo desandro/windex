@@ -1,7 +1,8 @@
 <?php require('config.php'); ?>
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <!--
          This index has been cleaned with Windex
@@ -11,11 +12,11 @@
          http://antisleep.com/software/indices
     -->
     
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content=" initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	
     <title><?php echo $titletext; ?></title>
-
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-    <meta name="viewport" content=" initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-
+	
     <link rel="stylesheet" media="screen and (max-width: 480px)" href="<?php echo $windexPath; ?>/css/iphone.css" />
     <link rel="stylesheet" media="screen and (min-width: 481px)" href="<?php echo $windexPath; ?>/css/screen-foxy.css" />
     <!--[if IE]>
