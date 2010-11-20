@@ -1,8 +1,8 @@
-<?php require('config.php'); ?>
-
 <!DOCTYPE html>
+<?php require('config.php'); ?>
 <html>
 <head>
+    <meta charset="utf-8">
     <!--
          This index has been cleaned with Windex
          http://github.com/desandro/windex
@@ -13,7 +13,6 @@
     
     <title><?php echo $titletext; ?></title>
 
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content=" initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 
     <link rel="stylesheet" media="screen and (max-width: 480px)" href="<?php echo $windexPath; ?>/css/iphone.css" />
