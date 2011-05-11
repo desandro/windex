@@ -34,13 +34,13 @@ Installation
 
 2. Edit windex/config.php and change any configuration options. 
 
-3. If your server runs PHP5, you'll need to change to line 4 of _windex/.htaccess_ to `AddHandler application/x-httpd-php5 .php`.
+3. If your server runs PHP5, you'll need to change to line 4 of _.htaccess_ to `AddHandler application/x-httpd-php5 .php`.
 
-4. Copy and paste the contents of _main.htaccess_ into a file named _.htaccess_ in the directory where you want to enable Windex. For example, if you wish to enable Windex in _/www/mysite.com/windex/files_, you would add the _.htaccess_ file to be _/www/mysite.com/windex/files/.htaccess_  If there already is an _.htaccess_ file, DO NOT overwrite the contents, as this code is essential to any CMS you may be running. Instead, add the code from _main.htaccess_ after the previous code. _.htaccess_ is a hidden configuration file. If this file does not exist you can rename _main.htaccess_ as _.htaccess_ and upload it.
+4. Copy and paste the contents of _windex.htaccess_ into a file named _.htaccess_ in the directory where you want to enable Windex. For example, if you wish to enable Windex in _/www/mysite.com/windex/files_, you would add the _.htaccess_ file to be _/www/mysite.com/windex/files/.htaccess_  If there already is an _.htaccess_ file, DO NOT overwrite the contents, as this code is essential to any CMS you may be running. Instead, add the code from _windex.htaccess_ after the previous code. _.htaccess_ is a hidden configuration file. If this file does not exist you can rename _windex.htaccess_ as _.htaccess_ and upload it.
 
 5. Try it out!  Browse to a directory that does not contain an index file.
 
-If you'd rather not have the windex folder sitting at the top of your site, you'll need to change the filepaths in _config.php_, all image URLs in the CSS files, and any _.htaccess_ file derived from _main.htaccess_
+If you'd rather not have the windex folder sitting at the top of your site, you'll need to change the filepaths in _config.php_, all image URLs in the CSS files, and any _.htaccess_ file derived from _windex.htaccess_
 
 If you wish disable an index page for any child folder, you'll need to upload a _.htaccess_ file in that folder with the following code:
 
@@ -50,11 +50,5 @@ License
 -------
 
 This software is free to use and modify.  You may not charge for or sell this software, nor any derivation of it. If you do modify it, we would love to hear about it. Give us a holler and let us know.
-
-Changelog
----------
-
-* **v1.04** Bug fixes
-* **v1.0** Original release
 
 Windex is a mod of [Indices by Scott Evans](http://antisleep.com/indices/).
