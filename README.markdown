@@ -1,7 +1,9 @@
 Windex - For a bright, shiny index
 ==================================
 
-Windex uses PHP and Apache to style default directory listing index pages. It works directly with Apache's built-in directory mechanism. 
+Windex uses PHP and Apache to style default directory listing index pages. It works directly with Apache's built-in directory mechanism.
+
+Check it out! [desandro.com/demo/of-windex/](http://desandro.com/demo/of-windex/)
 
 Authors
 -------
