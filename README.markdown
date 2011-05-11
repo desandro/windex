@@ -16,7 +16,7 @@ Features
 --------
 
 * **Styled directory listings.** Windex comes with three lovely themes. Add your own theme by creating another CSS file and linking to in _header.php_.
-* **iPhone-optimized view.** Shrink any browser to less than 480 pixels wide and you'll have a theme tailored specifically for mobile devices, perfect for the iPhone.
+* **Mobile-optimized view.** Shrink any browser to less than 480 pixels wide and you'll have a theme tailored specifically for mobile devices, perfect for the iPhone.
 * **Nice default icons.**
 * **README file contents parsed and appended to pages.** Windex looks for README files and adds them to index pages. It will parse documents marked up with Textile (_README.textile_) or Markdown (_README.markdown_, _README.md_, _README.mdown_). This option can be disabled in config.php.
 
@@ -36,9 +36,14 @@ Installation
 
 3. If your server runs PHP5, you'll need to change to line 4 of _.htaccess_ to `AddHandler application/x-httpd-php5 .php`.
 
-4. Copy and paste the contents of _windex.htaccess_ into a file named _.htaccess_ in the directory where you want to enable Windex. For example, if you wish to enable Windex in _/www/mysite.com/windex/files_, you would add the _.htaccess_ file to be _/www/mysite.com/windex/files/.htaccess_  If there already is an _.htaccess_ file, DO NOT overwrite the contents, as this code is essential to any CMS you may be running. Instead, add the code from _windex.htaccess_ after the previous code. _.htaccess_ is a hidden configuration file. If this file does not exist you can rename _windex.htaccess_ as _.htaccess_ and upload it.
+4. Copy and paste the contents of _windex.htaccess_ into a file named _.htaccess_ in the directory where you want to enable Windex. See more on .htaccess below.
 
 5. Try it out!  Browse to a directory that does not contain an index file.
+
+.htaccess
+---------
+
+If you wish to enable Windex in _/www/mysite.com/windex/files_, you would add the contents _windex.htaccess_ to be in _/www/mysite.com/windex/files/.htaccess_.  If there already is an _.htaccess_ file, DO NOT overwrite the contents, as this code is essential to any CMS you may be running. Instead, add the code from _windex.htaccess_ after the previous code. _.htaccess_ is a hidden configuration file. If this file does not exist you can upload _windex.htaccess_ and then rename it as _.htaccess_.
 
 If you'd rather not have the windex folder sitting at the top of your site, you'll need to change the filepaths in _config.php_, all image URLs in the CSS files, and any _.htaccess_ file derived from _windex.htaccess_
 
