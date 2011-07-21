@@ -51,6 +51,11 @@ If you wish disable an index page for any child folder, you'll need to upload a 
 
     Options -Indexes
 
+No PHP
+------
+
+The [no-php branch](https://github.com/desandro/windex/tree/no-php) that does not require PHP. Use this one if your environment does not support PHP, or certain htaccess features. **Recommended for Media Temple users.**
+
 License
 -------
 
