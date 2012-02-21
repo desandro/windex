@@ -34,11 +34,21 @@ Installation
 
 2. Edit windex/config.php and change any configuration options. 
 
-3. If your server runs PHP5, you'll need to change to line 4 of _.htaccess_ to `AddHandler application/x-httpd-php5 .php`.
+3. If your server runs PHP5, you'll need to change to line 4 of _windex/.htaccess_ to `AddHandler application/x-httpd-php5 .php`.
 
 4. Copy and paste the contents of _windex.htaccess_ into a file named _.htaccess_ in the directory where you want to enable Windex. See more on .htaccess below.
 
 5. Try it out!  Browse to a directory that does not contain an index file.
+
+So, to enable Windex on _mysite.com/files_, your site structure would look like:
+
+    mysite.com/
+      |
+      |-files/
+      | |
+      | |-.htaccess (has contents of windex.htaccess)
+      |
+      |-windex/
 
 .htaccess
 ---------
