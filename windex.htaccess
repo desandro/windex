@@ -15,8 +15,8 @@ IndexOptions SuppressHTMLPreamble SuppressRules HTMLTable
 IndexOptions IconHeight=24 IconWidth=24
 IndexOptions SuppressDescription
 
-HeaderName /windex/header.php
-ReadmeName /windex/footer.php
+HeaderName /windex/header.html
+ReadmeName /windex/footer.html
 
 DefaultIcon /windex/icons/default.png
 
