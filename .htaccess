@@ -1,46 +1,44 @@
-#========================================================================
-# .htaccess file for Windex
-#
-# Copy the contents of this file at the top of the directory tree whose 
-# directory Windex you want to affect.  Be sure that the file paths
-# point to the correct absolute URL of /windex on your server.
-#
-#========================================================================
+# Windex .htaccess
+# see options at https://httpd.apache.org/docs/2.4/mod/mod_autoindex.html
 
 Options +Indexes
 
 IndexOptions FancyIndexing
 IndexOptions FoldersFirst IgnoreCase XHTML NameWidth=* HTMLTable
-IndexOptions SuppressHTMLPreamble SuppressRules
+IndexOptions SuppressHTMLPreamble SuppressRules SuppressDescription
 IndexOptions IconHeight=24 IconWidth=24
-IndexOptions SuppressDescription
-
+IndexOptions IconsAreLinks
 # I disable this stuff, but you might like it
 IndexOptions SuppressLastModified SuppressColumnSorting
 
 HeaderName /windex/header.html
 ReadmeName /windex/footer.html
 
+# Uncomment this to hide windex/ in listing
+# IndexIgnore windex
+
+# Icons
+
 DefaultIcon /windex/icons/file.svg
 
-AddIcon /windex/icons/pixel.gif       ^^BLANKICON^^
-# AddIcon /windex/icons/pixel.gif       ..
-# AddIcon /windex/icons/dir.png         ^^DIRECTORY^^
-# AddIcon /windex/icons/text.png        .txt .text .textile .rtf
-# AddIcon /windex/icons/textmate.png    .htaccess .js .css .html .htm .php
-# AddIcon /windex/icons/img.png         .jpg .jpeg .png .gif .tif .tiff .ico
-# AddIcon /windex/icons/ai.png          .ai .eps
-# AddIcon /windex/icons/doc.png         .doc .docx
-# AddIcon /windex/icons/movie.png       .mov .qt .avi .wmv
-# AddIcon /windex/icons/mp3.png         .mp3 .ogg .wav .m4a
-# AddIcon /windex/icons/pdf.png         .pdf
-# AddIcon /windex/icons/ppt.png         .ppt .pptx
-# AddIcon /windex/icons/psd.png         .psd .psb
-# AddIcon /windex/icons/xls.png         .xls .xlsx
-# AddIcon /windex/icons/zip.png         .zip .bin .tar .rar .tgz .7z
-# AddIcon /windex/icons/fl.png          .fla .flv
-# AddIcon /windex/icons/swf.png         .swf
-# AddIcon /windex/icons/as.png          .as
+AddIcon /windex/icons/blank.svg       ^^BLANKICON^^
+AddIcon /windex/icons/folder.svg      ^^DIRECTORY^^
+AddIcon /windex/icons/back.svg        ..
+
+# Specific icons
+
+AddIcon /windex/icons/text.svg        .md
+AddIcon /windex/icons/script.svg      .js .json .mjs .php .sh .bash
+AddIcon /windex/icons/archive.svg     .zip .bin .tar .rar .tgz .7z
+AddIcon /windex/icons/vector.svg      .ai .svg .eps
+# TODO spreadsheet,database
+
+# Generic icons
+
+AddIconByType (TXT,/windex/icons/text.svg) text/*
+AddIconByType (IMG,/windex/icons/image.svg) image/*
+AddIconByType (SND,/windex/icons/audio.svg) audio/*
+AddIconByType (VID,/windex/icons/video.svg) video/*
 
 # Enable viewing .html files without .html extension
 RewriteEngine on
