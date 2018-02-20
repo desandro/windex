@@ -1,0 +1,59 @@
+/* Windex directory listing
+------------------------- */
+
+html {
+  font-family: -apple-system, sans-serif;
+}
+
+body {
+  color: #333;
+  background: #EEE;
+  padding-bottom: 120px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #15E;
+}
+a:visited { color: #818;}
+a:hover { color: #038;}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* hide header row */
+tr:first-child { display: none; }
+
+/* icon */
+td:nth-child(1) {
+  width: 24px;
+  vertical-align: middle;
+}
+
+td:nth-child(1) a { display: block; }
+
+/* file name */
+td:nth-child(2) a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+td:nth-child(2) a:hover {
+  background: #CDF;
+}
+
+/* size */
+td:nth-child(3) {
+  width: 4rem;
+  color: #888;
+  font-size: 0.9rem;
+}
