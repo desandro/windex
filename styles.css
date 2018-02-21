@@ -45,6 +45,30 @@ td:nth-child(2) a {
   display: block;
   padding: 8px 10px;
   border-radius: 4px;
+  position: relative;
+}
+
+/* pointer for folders */
+td:nth-child(2) a[href$="/"]:after {
+  content: '';
+  display: block;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  right: 15px;
+  top: 11px;
+  transform: rotate(45deg);
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  border-color: #08F;
+}
+
+/* Parent directory */
+/* select href="/folder/" but not "folder/" */
+td:nth-child(2) a[href^="/"][href$="/"]:after {
+  border-width:  0 0 3px 3px;
+  border-color: #AAA;
+  right: 11px
 }
 
 td:nth-child(2) a:hover {

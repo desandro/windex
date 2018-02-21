@@ -31,7 +31,10 @@ AddIcon /windex/icons/text.svg        .md
 AddIcon /windex/icons/script.svg      .js .json .mjs .php .sh .bash
 AddIcon /windex/icons/archive.svg     .zip .bin .tar .rar .tgz .7z
 AddIcon /windex/icons/vector.svg      .ai .svg .eps
-# TODO spreadsheet,database
+AddIcon /windex/icons/site.svg        .html .php .mustache .hbs .pug .jade
+AddIcon /windex/icons/stylesheet.svg  .css .scss .sass .less
+AddIcon /windex/icons/spreadsheet.svg .csv .xls .xslx .sql
+AddIcon /windex/icons/code.svg        .jar .rb .py .c
 
 # Generic icons
 
