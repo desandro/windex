@@ -35,6 +35,8 @@ AddIcon /windex/icons/site.svg        .html .php .mustache .hbs .pug .jade
 AddIcon /windex/icons/stylesheet.svg  .css .scss .sass .less
 AddIcon /windex/icons/spreadsheet.svg .csv .xls .xslx .sql
 AddIcon /windex/icons/code.svg        .jar .rb .py .c
+AddIcon /windex/icons/png.svg         .png
+AddIcon /windex/icons/gif.svg         .gif
 
 # Generic icons
 

@@ -4,7 +4,7 @@ Make your localhost look nice with stylized directory listings. No more 1996 jan
 
 Features include:
 
-+ SVG icons, sized for 16x16 & multiples thereof
++ SVG icons, sized for 24x24 & multiples thereof
 + View HTML files without extensions: `project/page.html` at `project/page`
 + Nice mobile view with big tap targets
 
