@@ -8,14 +8,18 @@ IndexOptions FoldersFirst IgnoreCase XHTML NameWidth=* HTMLTable
 IndexOptions SuppressHTMLPreamble SuppressRules SuppressDescription
 IndexOptions IconHeight=24 IconWidth=24
 IndexOptions IconsAreLinks
+
 # I disable this stuff, but you might like it
 IndexOptions SuppressLastModified SuppressColumnSorting
 
-HeaderName /windex/header.html
-ReadmeName /windex/footer.html
-
+# Do not ignore README
+IndexIgnoreReset ON
+IndexIgnore .??* *~ HEADER* RCS CVS *,v *,t *#
 # Uncomment this to hide windex/ in listing
 # IndexIgnore windex
+
+HeaderName /windex/header.html
+ReadmeName /windex/footer.html
 
 # Icons
 
@@ -27,6 +31,7 @@ AddIcon /windex/icons/back.svg        ..
 
 # Specific icons
 
+AddIcon /windex/icons/file.svg        README
 AddIcon /windex/icons/text.svg        .md
 AddIcon /windex/icons/script.svg      .js .json .mjs .php .sh .bash
 AddIcon /windex/icons/archive.svg     .zip .bin .tar .rar .tgz .7z
