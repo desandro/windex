@@ -1,6 +1,6 @@
 # Windex
 
-Make your localhost look nice with stylized directory index pages. No more 1996 jank.
+Make your localhost look nice with styled directory index pages. No more 1996 jank.
 
 Features include:
 
@@ -10,7 +10,7 @@ Features include:
 
 [View Windex demo on CodePen](https://codepen.io/desandro/full/OvwROP)
 
-![Windex screenshot](https://i.imgur.com/j9Tsazt.png)
+![Windex screenshot](https://i.imgur.com/PAbAooF.png)
 
 ## Install
 
