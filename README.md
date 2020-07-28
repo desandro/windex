@@ -38,26 +38,26 @@ Below are instructions to set that up on macOS. _Sorry Windows users, you're on 
 
 Open `/etc/apache2/httpd.conf` in your text editor. Making changes to this file will require administrator access. Change the following lines (line numbers may vary in your file):
 
-**Line 176:** Enable `mod_rewrite`. This enables `.htaccess` files to rewrite URLs.
+**Line 185:** Enable `mod_rewrite`. This enables `.htaccess` files to rewrite URLs.
 
 ``` apache
 LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 ```
 
-**Lines 245-246:** Change `DocumentRoot` and subsequent `Directory` to your desired directory. This sets `localhost` to point to the directory.
+**Lines 254-255:** Change `DocumentRoot` and subsequent `Directory` to your desired directory. This sets `localhost` to point to the directory.
 
 ``` apache
 DocumentRoot "/Users/username/projects"
 <Directory "/Users/username/projects">
 ```
 
-**Line 259:** Within this `<Directory>` block, add `Indexes` to `Options`. This enables file index view.
+**Line 268:** Within this `<Directory>` block, add `Indexes` to `Options`. This enables file index view.
 
 ``` apache
     Options FollowSymLinks Multiviews Indexes
 ```
 
-**Line 267:** Change `AllowOverride` value to `All`. This enables `.htaccess` files.
+**Line 276:** Change `AllowOverride` value to `All`. This enables `.htaccess` files.
 
 ``` apache
     AllowOverride All
