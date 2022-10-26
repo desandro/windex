@@ -16,48 +16,48 @@ Features include:
 
 Windex uses Apache.
 
-Let's say your root folder used for `localhost` is `~/projects`.
+Let's say your root folder used for `localhost` is `~/dev`.
 
-1. [Download](https://github.com/desandro/windex/archive/master.zip) or clone this project to the root folder: `~/projects/windex`
-2. Move `.htaccess` to the root folder: `~/projects/.htaccess`
+1. [Download](https://github.com/desandro/windex/archive/master.zip) or clone this project to the root folder: `~/dev/windex`
+2. Move `.htaccess` to the root folder: `~/dev/.htaccess`
 
 `.htaccess` is a hidden file. You can copy it to its location in Terminal via the command line:
 
 ``` sh
-cd ~/projects
+cd ~/dev
 cp windex/.htaccess .
 ```
 
 ## Setting up a practical localhost on macOS
 
-I like to use `localhost` so I can view my projects in `~/projects`. This allows me to create static sites that I can easily view in the browser, without having to start up a server. For example, going to `localhost/masonry/sandbox` allows me to see `~/projects/masonry/sandbox`.
+I like to use `localhost` so I can view my projects in `~/dev`. This allows me to create static sites that I can easily view in the browser, without having to start up a server. For example, going to `localhost/masonry/sandbox` allows me to see `~/dev/masonry/sandbox`.
 
-Below are instructions to set that up on macOS. _Sorry Windows users, you're on your own here._ This will make a single user's folder viewable for all users. [For separate users folders like `localhost/~username`, view these instructions.](https://discussions.apple.com/docs/DOC-3083)
+Below are instructions to set that up on macOS. This will make a single user's folder viewable for all users. [For separate users folders like `localhost/~username`, view these instructions.](https://discussions.apple.com/docs/DOC-3083)
 
 ---
 
 Open `/etc/apache2/httpd.conf` in your text editor. Making changes to this file will require administrator access. Change the following lines (line numbers may vary in your file):
 
-**Line 185:** Enable `mod_rewrite`. This enables `.htaccess` files to rewrite URLs.
+**Line 186:** Enable `mod_rewrite`. This enables `.htaccess` files to rewrite URLs.
 
 ``` apache
 LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 ```
 
-**Lines 254-255:** Change `DocumentRoot` and subsequent `Directory` to your desired directory. This sets `localhost` to point to the directory.
+**Lines 255-256:** Change `DocumentRoot` and subsequent `Directory` to your desired directory. This sets `localhost` to point to the directory.
 
 ``` apache
-DocumentRoot "/Users/username/projects"
-<Directory "/Users/username/projects">
+DocumentRoot "/Users/username/dev"
+<Directory "/Users/username/dev">
 ```
 
-**Line 268:** Within this `<Directory>` block, add `Indexes` to `Options`. This enables file index view.
+**Line 269:** Within this `<Directory>` block, add `Indexes` to `Options`. This enables file index view.
 
 ``` apache
     Options FollowSymLinks Multiviews Indexes
 ```
 
-**Line 276:** Change `AllowOverride` value to `All`. This enables `.htaccess` files.
+**Line 277:** Change `AllowOverride` value to `All`. This enables `.htaccess` files.
 
 ``` apache
     AllowOverride All
@@ -66,8 +66,8 @@ DocumentRoot "/Users/username/projects"
 That block should look like:
 
 ``` apache
-DocumentRoot "/Users/username/projects"
-<Directory "/Users/username/projects">
+DocumentRoot "/Users/username/dev"
+<Directory "/Users/username/dev">
     # Possible values for the Options directive...
     Options FollowSymLinks Multiviews Indexes
     MultiviewsMatch Any
@@ -88,7 +88,7 @@ In Terminal, start or restart `apachectl`.
 sudo apachectl restart
 ```
 
-View [http://localhost](http://localhost) in a browser. You'll should see the index page for `~/projects`. Without Windex, it's ugly, but it works. With Windex, it's pretty.
+View [http://localhost](http://localhost) in a browser. You'll should see the index page for `~/dev`. Without Windex, it's ugly, but it works. With Windex, it's pretty.
 
 If you messed up `httpd.conf`, you can replace it with its original at `/etc/apache2/original/httpd.conf`.
 
