@@ -82,6 +82,12 @@ DocumentRoot "/Users/username/dev"
 
 Save changes to `httpd.conf`. This may require macOS user approval.
 
+You may need to enable file permissions on a parent directory.
+
+``` sh
+chmod o+x /Users/username
+```
+
 In Terminal, start or restart `apachectl`.
 
 ``` sh
